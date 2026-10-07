@@ -1,0 +1,662 @@
+{
+  "schema": 1,
+  "reference": "Batomon trinket reference",
+  "balance": "24",
+  "gameBuild": "1.2.0 / 25600878",
+  "source": "https://batomon.com/trinkets",
+  "sourceAccessed": "2026-10-07",
+  "assetPolicy": "Text metadata only; sprite paths are provenance and artwork is not redistributed while licensing is pending.",
+  "entries": [
+    {
+      "id": "bargain_bin",
+      "slug": "bargain-bin",
+      "name": "Bargain Bin",
+      "description": "The first Common monster you buy each day is free.",
+      "spritePath": "/game/25600878/trinket/bargain_bin.png"
+    },
+    {
+      "id": "boxing_glove",
+      "slug": "boxing-glove",
+      "name": "Boxing Glove",
+      "description": "On Victory Your team gains +5 Damage permanently.",
+      "spritePath": "/game/25600878/trinket/boxing_glove.png"
+    },
+    {
+      "id": "gold_bracelet",
+      "slug": "gold-bracelet",
+      "name": "Gold Bracelet",
+      "description": "At the start of each day, give a random monster +8 Sell Value.",
+      "spritePath": "/game/25600878/trinket/gold_bracelet.png"
+    },
+    {
+      "id": "gold_nugget",
+      "slug": "gold-nugget",
+      "name": "Gold Nugget",
+      "description": "Increase Income by $3.",
+      "spritePath": "/game/25600878/trinket/gold_nugget.png"
+    },
+    {
+      "id": "gold_trophy",
+      "slug": "gold-trophy",
+      "name": "Gold Trophy",
+      "description": "On Victory Gain $8.",
+      "spritePath": "/game/25600878/trinket/gold_trophy.png"
+    },
+    {
+      "id": "junk",
+      "slug": "junk",
+      "name": "Junk",
+      "description": "Does nothing.",
+      "spritePath": "/game/25600878/trinket/junk.png"
+    },
+    {
+      "id": "locked_box",
+      "slug": "locked-box",
+      "name": "Locked Box",
+      "description": "The next time you lose a battle, gain a random non-unique Trinket of the highest rarity your shop rank allows.",
+      "spritePath": "/game/25600878/trinket/locked_box.png"
+    },
+    {
+      "id": "mini_duplicator",
+      "slug": "mini-duplicator",
+      "name": "Mini Duplicator",
+      "description": "Gain an additional copy of the next non-unique Trinket from a gift.",
+      "spritePath": "/game/25600878/trinket/mini_duplicator.png"
+    },
+    {
+      "id": "power_pouch",
+      "slug": "power-pouch",
+      "name": "Power Pouch",
+      "description": "When you buy an item, give your monsters +2 Damage.",
+      "spritePath": "/game/25600878/trinket/power_pouch.png"
+    },
+    {
+      "id": "quick_bell",
+      "slug": "quick-bell",
+      "name": "Quick Bell",
+      "description": "Monsters in your shop have +4% Cooldown Speed.",
+      "spritePath": "/game/25600878/trinket/quick_bell.png"
+    },
+    {
+      "id": "quick_flag",
+      "slug": "quick-flag",
+      "name": "Quick Flag",
+      "description": "Your monsters in the leftmost column have +4% Cooldown Speed.",
+      "spritePath": "/game/25600878/trinket/quick_flag.png"
+    },
+    {
+      "id": "rainbow_berry",
+      "slug": "rainbow-berry",
+      "name": "Rainbow Berry",
+      "description": "Your monsters have +4 Damage for each unique type on your team.",
+      "spritePath": "/game/25600878/trinket/rainbow_berry.png"
+    },
+    {
+      "id": "sapphire_ring",
+      "slug": "sapphire-ring",
+      "name": "Sapphire Ring",
+      "description": "Monsters in your shop have +10% Heal.",
+      "spritePath": "/game/25600878/trinket/sapphire_ring.png"
+    },
+    {
+      "id": "speed_whistle",
+      "slug": "speed-whistle",
+      "name": "Speed Whistle",
+      "description": "The next monster you buy has +12% Cooldown Speed.",
+      "spritePath": "/game/25600878/trinket/speed_whistle.png"
+    },
+    {
+      "id": "tempo_charm",
+      "slug": "tempo-charm",
+      "name": "Tempo Charm",
+      "description": "On Battle Start A random monster gains +4% Cooldown Speed permanently.",
+      "spritePath": "/game/25600878/trinket/tempo_charm.png"
+    },
+    {
+      "id": "topaz_ring",
+      "slug": "topaz-ring",
+      "name": "Topaz Ring",
+      "description": "Monsters in your shop have +10% Shield.",
+      "spritePath": "/game/25600878/trinket/topaz_ring.png"
+    },
+    {
+      "id": "training_weights",
+      "slug": "training-weights",
+      "name": "Training Weights",
+      "description": "+100 HP",
+      "spritePath": "/game/25600878/trinket/training_weights.png"
+    },
+    {
+      "id": "treasure_map",
+      "slug": "treasure-map",
+      "name": "Treasure Map",
+      "description": "Your next Trinket gift choices are 1 rarity tier higher.",
+      "spritePath": "/game/25600878/trinket/treasure_map.png"
+    },
+    {
+      "id": "wood_sword",
+      "slug": "wood-sword",
+      "name": "Wood Sword",
+      "description": "Your monsters have +5 Damage.",
+      "spritePath": "/game/25600878/trinket/wood_sword.png"
+    },
+    {
+      "id": "bug_net",
+      "slug": "bug-net",
+      "name": "Bug Net",
+      "description": "Bug monsters in the shop cost 3 less.",
+      "spritePath": "/game/25600878/trinket/bug_net.png"
+    },
+    {
+      "id": "earth_crest",
+      "slug": "earth-crest",
+      "name": "Earth Crest",
+      "description": "On Battle Start Your monsters in the rightmost column gain +10% Shield permanently.",
+      "spritePath": "/game/25600878/trinket/earth_crest.png"
+    },
+    {
+      "id": "echo_charm",
+      "slug": "echo-charm",
+      "name": "Echo Charm",
+      "description": "Your monsters' On Bought abilities activate an additional time.",
+      "spritePath": "/game/25600878/trinket/echo_charm.png"
+    },
+    {
+      "id": "fire_bell",
+      "slug": "fire-bell",
+      "name": "Fire Bell",
+      "description": "Fire monsters in your shop have +5 Burn.",
+      "spritePath": "/game/25600878/trinket/fire_bell.png"
+    },
+    {
+      "id": "fire_orb",
+      "slug": "fire-orb",
+      "name": "Fire Orb",
+      "description": "Your Fire monsters have +3 Burn.",
+      "spritePath": "/game/25600878/trinket/fire_orb.png"
+    },
+    {
+      "id": "greedy_gloves",
+      "slug": "greedy-gloves",
+      "name": "Greedy Gloves",
+      "description": "You can take all of the choices from your next Trinket gift.",
+      "spritePath": "/game/25600878/trinket/greedy_gloves.png"
+    },
+    {
+      "id": "market_license",
+      "slug": "market-license",
+      "name": "Market License",
+      "description": "Increase shop rank by 1.",
+      "spritePath": "/game/25600878/trinket/market_license.png"
+    },
+    {
+      "id": "membership_card",
+      "slug": "membership-card",
+      "name": "Membership Card",
+      "description": "You can use 1 additional Item each day.",
+      "spritePath": "/game/25600878/trinket/membership_card.png"
+    },
+    {
+      "id": "piggy_bank",
+      "slug": "piggy-bank",
+      "name": "Piggy Bank",
+      "description": "Gain +$1 for each $10 you have at the end of each day.",
+      "spritePath": "/game/25600878/trinket/piggy_bank.png"
+    },
+    {
+      "id": "poison_bell",
+      "slug": "poison-bell",
+      "name": "Poison Bell",
+      "description": "Toxic monsters in your shop have +6 Poison.",
+      "spritePath": "/game/25600878/trinket/poison_bell.png"
+    },
+    {
+      "id": "poison_orb",
+      "slug": "poison-orb",
+      "name": "Poison Orb",
+      "description": "Your Toxic monsters have +3 Poison.",
+      "spritePath": "/game/25600878/trinket/poison_orb.png"
+    },
+    {
+      "id": "power_band",
+      "slug": "power-band",
+      "name": "Power Band",
+      "description": "Give the first monster you buy each day +20 Damage.",
+      "spritePath": "/game/25600878/trinket/power_band.png"
+    },
+    {
+      "id": "power_crown",
+      "slug": "power-crown",
+      "name": "Power Crown",
+      "description": "Your top middle monster has +20 Damage.",
+      "spritePath": "/game/25600878/trinket/power_crown.png"
+    },
+    {
+      "id": "rally_flag",
+      "slug": "rally-flag",
+      "name": "Rally Flag",
+      "description": "On Battle Start Your monsters in the leftmost column gain +12 Damage permanently.",
+      "spritePath": "/game/25600878/trinket/rally_flag.png"
+    },
+    {
+      "id": "sea_crest",
+      "slug": "sea-crest",
+      "name": "Sea Crest",
+      "description": "On Battle Start Your monsters in the rightmost column gain +10% Heal permanently.",
+      "spritePath": "/game/25600878/trinket/sea_crest.png"
+    },
+    {
+      "id": "small_club",
+      "slug": "small-club",
+      "name": "Small Club",
+      "description": "Your monsters with a Cooldown of 5 seconds or above have +20% Damage.",
+      "spritePath": "/game/25600878/trinket/small_club.png"
+    },
+    {
+      "id": "winged_fossil",
+      "slug": "winged-fossil",
+      "name": "Winged Fossil",
+      "description": "Your Flying monsters have +25% stats (except Cooldown and Multicast).",
+      "spritePath": "/game/25600878/trinket/winged_fossil.png"
+    },
+    {
+      "id": "ancient_plume",
+      "slug": "ancient-plume",
+      "name": "Ancient Plume",
+      "description": "On Battle Start If you only have 1 monster, give it +1 Multicast permanently and destroy this.",
+      "spritePath": "/game/25600878/trinket/ancient_plume.png"
+    },
+    {
+      "id": "arcade_coins",
+      "slug": "arcade-coins",
+      "name": "Arcade Coins",
+      "description": "Gain 10 free rerolls.",
+      "spritePath": "/game/25600878/trinket/arcade_coins.png"
+    },
+    {
+      "id": "blue_incense",
+      "slug": "blue-incense",
+      "name": "Blue Incense",
+      "description": "The next 5 shops will contain only Rare monsters.",
+      "spritePath": "/game/25600878/trinket/blue_incense.png"
+    },
+    {
+      "id": "fake_diamond",
+      "slug": "fake-diamond",
+      "name": "Fake Diamond",
+      "description": "The next time you lose a battle, gain $40.",
+      "spritePath": "/game/25600878/trinket/fake_diamond.png"
+    },
+    {
+      "id": "fools_gold",
+      "slug": "fools-gold",
+      "name": "Fool's Gold",
+      "description": "Increase Income by $15. The shop no longer stocks Item.",
+      "spritePath": "/game/25600878/trinket/fools_gold.png"
+    },
+    {
+      "id": "gold_bar",
+      "slug": "gold-bar",
+      "name": "Gold Bar",
+      "description": "Increase Income by $10.",
+      "spritePath": "/game/25600878/trinket/gold_bar.png"
+    },
+    {
+      "id": "heros_sword",
+      "slug": "heros-sword",
+      "name": "Hero's Sword",
+      "description": "Your monsters have +12 Damage.",
+      "spritePath": "/game/25600878/trinket/heros_sword.png"
+    },
+    {
+      "id": "kaleidoscope",
+      "slug": "kaleidoscope",
+      "name": "Kaleidoscope",
+      "description": "Your monsters that don't share a type with any ally have +25% Cooldown Speed.",
+      "spritePath": "/game/25600878/trinket/kaleidoscope.png"
+    },
+    {
+      "id": "link_cable",
+      "slug": "link-cable",
+      "name": "Link Cable",
+      "description": "All of your team's monsters are now considered adjacent to each other.",
+      "spritePath": "/game/25600878/trinket/link_cable.png"
+    },
+    {
+      "id": "mega_duplicator",
+      "slug": "mega-duplicator",
+      "name": "Mega Duplicator",
+      "description": "Gain 2 additional copies of the next non-unique Trinket from a gift.",
+      "spritePath": "/game/25600878/trinket/mega_duplicator.png"
+    },
+    {
+      "id": "metal_bat",
+      "slug": "metal-bat",
+      "name": "Metal Bat",
+      "description": "On Battle Start Your monster with the highest Cooldown gains +50% Damage for this battle.",
+      "spritePath": "/game/25600878/trinket/metal_bat.png"
+    },
+    {
+      "id": "meteorite",
+      "slug": "meteorite",
+      "name": "Meteorite",
+      "description": "On Battle Start Your monsters with no abilities gain +20 Damage permanently.",
+      "spritePath": "/game/25600878/trinket/meteorite.png"
+    },
+    {
+      "id": "power_bell",
+      "slug": "power-bell",
+      "name": "Power Bell",
+      "description": "Monsters in your shop have +25 Damage.",
+      "spritePath": "/game/25600878/trinket/power_bell.png"
+    },
+    {
+      "id": "rigged_dice",
+      "slug": "rigged-dice",
+      "name": "Rigged Dice",
+      "description": "The first shop each day stocks only the rarest monsters and items your shop rank allows.",
+      "spritePath": "/game/25600878/trinket/rigged_dice.png"
+    },
+    {
+      "id": "sapphire_amulet",
+      "slug": "sapphire-amulet",
+      "name": "Sapphire Amulet",
+      "description": "You receive 25% more Heal.",
+      "spritePath": "/game/25600878/trinket/sapphire_amulet.png"
+    },
+    {
+      "id": "scrap_sword",
+      "slug": "scrap-sword",
+      "name": "Scrap Sword",
+      "description": "Your monsters have +2 Damage for each Common Trinket you have.",
+      "spritePath": "/game/25600878/trinket/scrap_sword.png"
+    },
+    {
+      "id": "silver_watch",
+      "slug": "silver-watch",
+      "name": "Silver Watch",
+      "description": "When a monster levels up from a merge, it gains +12% Cooldown Speed.",
+      "spritePath": "/game/25600878/trinket/silver_watch.png"
+    },
+    {
+      "id": "speed_crest",
+      "slug": "speed-crest",
+      "name": "Speed Crest",
+      "description": "Your monsters in the rightmost column have +15% Cooldown Speed.",
+      "spritePath": "/game/25600878/trinket/speed_crest.png"
+    },
+    {
+      "id": "terrarium",
+      "slug": "terrarium",
+      "name": "Terrarium",
+      "description": "Your Bug monsters have +20% Damage.",
+      "spritePath": "/game/25600878/trinket/terrarium.png"
+    },
+    {
+      "id": "topaz_amulet",
+      "slug": "topaz-amulet",
+      "name": "Topaz Amulet",
+      "description": "You receive 25% more Shield.",
+      "spritePath": "/game/25600878/trinket/topaz_amulet.png"
+    },
+    {
+      "id": "warhorn",
+      "slug": "warhorn",
+      "name": "Warhorn",
+      "description": "On Battle Start Your monsters gain +10 Damage permanently.",
+      "spritePath": "/game/25600878/trinket/warhorn.png"
+    },
+    {
+      "id": "blitz_bell",
+      "slug": "blitz-bell",
+      "name": "Blitz Bell",
+      "description": "Monsters in your shop have +25% Cooldown Speed.",
+      "spritePath": "/game/25600878/trinket/blitz_bell.png"
+    },
+    {
+      "id": "echo_bell",
+      "slug": "echo-bell",
+      "name": "Echo Bell",
+      "description": "When you buy a 0 cost item, use it an additional time.",
+      "spritePath": "/game/25600878/trinket/echo_bell.png"
+    },
+    {
+      "id": "grow_lamp",
+      "slug": "grow-lamp",
+      "name": "Grow Lamp",
+      "description": "Your Grass monsters only need 2 copies to level up.",
+      "spritePath": "/game/25600878/trinket/grow_lamp.png"
+    },
+    {
+      "id": "haste_crown",
+      "slug": "haste-crown",
+      "name": "Haste Crown",
+      "description": "Your top middle monster has +20% Cooldown Speed.",
+      "spritePath": "/game/25600878/trinket/haste_crown.png"
+    },
+    {
+      "id": "haste_orb",
+      "slug": "haste-orb",
+      "name": "Haste Orb",
+      "description": "Your monsters have +10% Cooldown Speed.",
+      "spritePath": "/game/25600878/trinket/haste_orb.png"
+    },
+    {
+      "id": "momentum_flag",
+      "slug": "momentum-flag",
+      "name": "Momentum Flag",
+      "description": "On Battle Start Your monsters in the leftmost column gain +8% Cooldown Speed permanently.",
+      "spritePath": "/game/25600878/trinket/momentum_flag.png"
+    },
+    {
+      "id": "mysterious_charm",
+      "slug": "mysterious-charm",
+      "name": "Mysterious Charm",
+      "description": "+25% HP",
+      "spritePath": "/game/25600878/trinket/mysterious_charm.png"
+    },
+    {
+      "id": "mysterious_mask",
+      "slug": "mysterious-mask",
+      "name": "Mysterious Mask",
+      "description": "Choose a trainer and gain their ability.",
+      "spritePath": "/game/25600878/trinket/mysterious_mask.png"
+    },
+    {
+      "id": "purple_incense",
+      "slug": "purple-incense",
+      "name": "Purple Incense",
+      "description": "The next 5 shops will contain only Super Rare monsters.",
+      "spritePath": "/game/25600878/trinket/purple_incense.png"
+    },
+    {
+      "id": "razor_beak",
+      "slug": "razor-beak",
+      "name": "Razor Beak",
+      "description": "Your Flying monsters have +1 Multicast.",
+      "spritePath": "/game/25600878/trinket/razor_beak.png"
+    },
+    {
+      "id": "repeater_charm",
+      "slug": "repeater-charm",
+      "name": "Repeater Charm",
+      "description": "Your monsters' On Battle Start abilities activate an additional time.",
+      "spritePath": "/game/25600878/trinket/repeater_charm.png"
+    },
+    {
+      "id": "rocket_boots",
+      "slug": "rocket-boots",
+      "name": "Rocket Boots",
+      "description": "Monsters in your shop gain Flying typing.",
+      "spritePath": "/game/25600878/trinket/rocket_boots.png"
+    },
+    {
+      "id": "upgrade_disc",
+      "slug": "upgrade-disc",
+      "name": "Upgrade Disc",
+      "description": "When you buy a monster, level it up and destroy this.",
+      "spritePath": "/game/25600878/trinket/upgrade_disc.png"
+    },
+    {
+      "id": "vip_pass",
+      "slug": "vip-pass",
+      "name": "VIP Pass",
+      "description": "Your shop no longer stocks anything Common or Uncommon.",
+      "spritePath": "/game/25600878/trinket/vip_pass.png"
+    },
+    {
+      "id": "barbell",
+      "slug": "barbell",
+      "name": "Barbell",
+      "description": "+5000 HP",
+      "spritePath": "/game/25600878/trinket/barbell.png"
+    },
+    {
+      "id": "candy_jar",
+      "slug": "candy-jar",
+      "name": "Candy Jar",
+      "description": "On Battle Start Your Common and Uncommon monsters permanently level up to level 3.",
+      "spritePath": "/game/25600878/trinket/candy_jar.png"
+    },
+    {
+      "id": "dryads_charm",
+      "slug": "dryads-charm",
+      "name": "Dryad's Charm",
+      "description": "+30% HP",
+      "spritePath": "/game/25600878/trinket/dryads_charm.png"
+    },
+    {
+      "id": "fancy_sword",
+      "slug": "fancy-sword",
+      "name": "Fancy Sword",
+      "description": "Your monsters have +3% Damage for each Trinket you have.",
+      "spritePath": "/game/25600878/trinket/fancy_sword.png"
+    },
+    {
+      "id": "giant_club",
+      "slug": "giant-club",
+      "name": "Giant Club",
+      "description": "Your monsters with a Cooldown of 5 seconds or above have +70% stats (except Cooldown and Multicast).",
+      "spritePath": "/game/25600878/trinket/giant_club.png"
+    },
+    {
+      "id": "gold_incense",
+      "slug": "gold-incense",
+      "name": "Gold Incense",
+      "description": "The next 5 shops will contain only Legendary monsters.",
+      "spritePath": "/game/25600878/trinket/gold_incense.png"
+    },
+    {
+      "id": "gold_o_matic",
+      "slug": "gold-o-matic",
+      "name": "Gold-o-matic",
+      "description": "Increase Income by $30.",
+      "spritePath": "/game/25600878/trinket/gold_o_matic.png"
+    },
+    {
+      "id": "metronome",
+      "slug": "metronome",
+      "name": "Metronome",
+      "description": "When your monsters cast, they gain +10 Damage for this battle.",
+      "spritePath": "/game/25600878/trinket/metronome.png"
+    },
+    {
+      "id": "mighty_bell",
+      "slug": "mighty-bell",
+      "name": "Mighty Bell",
+      "description": "Monsters in your shop have +300 Damage.",
+      "spritePath": "/game/25600878/trinket/mighty_bell.png"
+    },
+    {
+      "id": "mysterious_chest",
+      "slug": "mysterious-chest",
+      "name": "Mysterious Chest",
+      "description": "On Battle Lost Gain a random non-unique Legendary Trinket.",
+      "spritePath": "/game/25600878/trinket/mysterious_chest.png"
+    },
+    {
+      "id": "mysterious_gem",
+      "slug": "mysterious-gem",
+      "name": "Mysterious Gem",
+      "description": "Your monsters have +20% Damage.",
+      "spritePath": "/game/25600878/trinket/mysterious_gem.png"
+    },
+    {
+      "id": "research_notes",
+      "slug": "research-notes",
+      "name": "Research Notes",
+      "description": "Legendary monsters are much more likely to appear in your shop.",
+      "spritePath": "/game/25600878/trinket/research_notes.png"
+    },
+    {
+      "id": "winged_crown",
+      "slug": "winged-crown",
+      "name": "Winged Crown",
+      "description": "Your top middle monster has +1 Multicast.",
+      "spritePath": "/game/25600878/trinket/winged_crown.png"
+    },
+    {
+      "id": "zenith_stone",
+      "slug": "zenith-stone",
+      "name": "Zenith Stone",
+      "description": "When your monsters gain stats, they gain +80% more (except Multicast and % bonuses).",
+      "spritePath": "/game/25600878/trinket/zenith_stone.png"
+    },
+    {
+      "id": "alphas_crown",
+      "slug": "alphas-crown",
+      "name": "Alpha Crown",
+      "description": "On Battle Start Your monsters' Damage is set to your top-middle monster's Damage for this battle.",
+      "spritePath": "/game/25600878/trinket/alphas_crown.png"
+    },
+    {
+      "id": "excalibur",
+      "slug": "excalibur",
+      "name": "Excalibur",
+      "description": "Your monsters have +350 Damage.",
+      "spritePath": "/game/25600878/trinket/excalibur.png"
+    },
+    {
+      "id": "holy_grail",
+      "slug": "holy-grail",
+      "name": "Holy Grail",
+      "description": "On Victory Gain $100.",
+      "spritePath": "/game/25600878/trinket/holy_grail.png"
+    },
+    {
+      "id": "master_crown",
+      "slug": "master-crown",
+      "name": "Master Crown",
+      "description": "Your top middle monster has +80% stats (except Cooldown and Multicast).",
+      "spritePath": "/game/25600878/trinket/master_crown.png"
+    },
+    {
+      "id": "mega_upgrade_disc",
+      "slug": "mega-upgrade-disc",
+      "name": "Mega Upgrade Disc",
+      "description": "When a monster reaches level 3, level it up again and destroy this.",
+      "spritePath": "/game/25600878/trinket/mega_upgrade_disc.png"
+    },
+    {
+      "id": "mystic_incense",
+      "slug": "mystic-incense",
+      "name": "Mystic Incense",
+      "description": "A Mythical monster will appear in your next shop.",
+      "spritePath": "/game/25600878/trinket/mystic_incense.png"
+    },
+    {
+      "id": "rainbow_pearl",
+      "slug": "rainbow-pearl",
+      "name": "Rainbow Pearl",
+      "description": "All monsters in your shop are SHINY.",
+      "spritePath": "/game/25600878/trinket/rainbow_pearl.png"
+    },
+    {
+      "id": "ultra_duplicator",
+      "slug": "ultra-duplicator",
+      "name": "Ultra Duplicator",
+      "description": "Gain an additional copy of each non-unique Trinket from a gift.",
+      "spritePath": "/game/25600878/trinket/ultra_duplicator.png"
+    }
+  ]
+}

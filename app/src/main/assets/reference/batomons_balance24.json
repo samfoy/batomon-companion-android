@@ -1,0 +1,963 @@
+{
+  "schema": 1,
+  "reference": "Batomon batomon reference",
+  "balance": "24",
+  "gameBuild": "1.2.0 / 25600878",
+  "source": "https://batomon.com/batomon",
+  "sourceAccessed": "2026-10-07",
+  "assetPolicy": "Text metadata only; sprite paths are provenance and artwork is not redistributed while licensing is pending.",
+  "entries": [
+    {
+      "id": "bambudo",
+      "slug": "bambudo",
+      "name": "Bambudo",
+      "description": "+35 Damage permanently.",
+      "spritePath": "/game/25600878/monster/bambudo.png"
+    },
+    {
+      "id": "beetbud",
+      "slug": "beetbud",
+      "name": "Beetbud",
+      "description": "Evolves at level 3.",
+      "spritePath": "/game/25600878/monster/beetbud.png"
+    },
+    {
+      "id": "beetdown",
+      "slug": "beetdown",
+      "name": "Beetdown",
+      "description": "+250 Damage permanently.",
+      "spritePath": "/game/25600878/monster/beetdown.png"
+    },
+    {
+      "id": "bunchop",
+      "slug": "bunchop",
+      "name": "Bunchop",
+      "description": "Your team has +50 HP. On Victory Increase this ability's HP bonus by +50.",
+      "spritePath": "/game/25600878/monster/bunchop.png"
+    },
+    {
+      "id": "dewlotl",
+      "slug": "dewlotl",
+      "name": "Dewlotl",
+      "description": "When an ally levels up, this gains +40 Damage and +40 Heal permanently.",
+      "spritePath": "/game/25600878/monster/dewlotl.png"
+    },
+    {
+      "id": "dribblet",
+      "slug": "dribblet",
+      "name": "Dribblet",
+      "description": "Evolves at level 3.",
+      "spritePath": "/game/25600878/monster/dribblet.png"
+    },
+    {
+      "id": "emperooze",
+      "slug": "emperooze",
+      "name": "Emperooze",
+      "description": "+50 Damage and +50 Heal permanently.",
+      "spritePath": "/game/25600878/monster/emperooze.png"
+    },
+    {
+      "id": "frillet",
+      "slug": "frillet",
+      "name": "Frillet",
+      "description": "Evolves at level 3.",
+      "spritePath": "/game/25600878/monster/frillet.png"
+    },
+    {
+      "id": "furnadon",
+      "slug": "furnadon",
+      "name": "Furnadon",
+      "description": "Has an additional +1 Burn for each Trinket that you own.",
+      "spritePath": "/game/25600878/monster/furnadon.png"
+    },
+    {
+      "id": "guardiant",
+      "slug": "guardiant",
+      "name": "Guardiant",
+      "description": "After you buy a Bug monster, this gains +7 Damage.",
+      "spritePath": "/game/25600878/monster/guardiant.png"
+    },
+    {
+      "id": "kindlepot",
+      "slug": "kindlepot",
+      "name": "Kindlepot",
+      "description": "Evolve after collecting 5 more Trinkets.",
+      "spritePath": "/game/25600878/monster/kindlepot.png"
+    },
+    {
+      "id": "leafleap",
+      "slug": "leafleap",
+      "name": "Leafleap",
+      "description": "On Bought Give all monsters in the shop +5 Damage for the rest of the run.",
+      "spritePath": "/game/25600878/monster/leafleap.png"
+    },
+    {
+      "id": "mosslug",
+      "slug": "mosslug",
+      "name": "Mosslug",
+      "description": "+20 Damage for this battle.",
+      "spritePath": "/game/25600878/monster/mosslug.png"
+    },
+    {
+      "id": "panbud",
+      "slug": "panbud",
+      "name": "Panbud",
+      "description": "Evolves at level 3.",
+      "spritePath": "/game/25600878/monster/panbud.png"
+    },
+    {
+      "id": "pebbler",
+      "slug": "pebbler",
+      "name": "Pebbler",
+      "description": "+15 Shield for this battle.",
+      "spritePath": "/game/25600878/monster/pebbler.png"
+    },
+    {
+      "id": "pipskull",
+      "slug": "pipskull",
+      "name": "Pipskull",
+      "description": "Evolve after this monster experiences Knockout 3 times.",
+      "spritePath": "/game/25600878/monster/pipskull.png"
+    },
+    {
+      "id": "ratacomb",
+      "slug": "ratacomb",
+      "name": "Ratacomb",
+      "description": "+1 Multicast permanently.",
+      "spritePath": "/game/25600878/monster/ratacomb.png"
+    },
+    {
+      "id": "rattleghast",
+      "slug": "rattleghast",
+      "name": "Rattleghast",
+      "description": "Knockout adjacent allies and gain +4 Poison this battle for each ally Knockout.",
+      "spritePath": "/game/25600878/monster/rattleghast.png"
+    },
+    {
+      "id": "rubbin",
+      "slug": "rubbin",
+      "name": "Rubbin",
+      "description": "Gain a Junk Trinket.",
+      "spritePath": "/game/25600878/monster/rubbin.png"
+    },
+    {
+      "id": "scorchimp",
+      "slug": "scorchimp",
+      "name": "Scorchimp",
+      "description": "Evolves at level 3.",
+      "spritePath": "/game/25600878/monster/scorchimp.png"
+    },
+    {
+      "id": "shellter",
+      "slug": "shellter",
+      "name": "Shellter",
+      "description": "-20 Shield for this battle.",
+      "spritePath": "/game/25600878/monster/shellter.png"
+    },
+    {
+      "id": "stingarde",
+      "slug": "stingarde",
+      "name": "Stingarde",
+      "description": "Knockout self.",
+      "spritePath": "/game/25600878/monster/stingarde.png"
+    },
+    {
+      "id": "sunsage",
+      "slug": "sunsage",
+      "name": "Sunsage",
+      "description": "For each Fire ally, this gains +20% Cooldown Speed permanently.",
+      "spritePath": "/game/25600878/monster/sunsage.png"
+    },
+    {
+      "id": "swoonet",
+      "slug": "swoonet",
+      "name": "Swoonet",
+      "description": "This only needs 2 copies to level up. This can level up indefinitely.",
+      "spritePath": "/game/25600878/monster/swoonet.png"
+    },
+    {
+      "id": "toximoth",
+      "slug": "toximoth",
+      "name": "Toximoth",
+      "description": "On Bought Give Toxic monsters in the shop +1 Poison for the rest of the run.",
+      "spritePath": "/game/25600878/monster/toximoth.png"
+    },
+    {
+      "id": "aviarab",
+      "slug": "aviarab",
+      "name": "Aviarab",
+      "description": "On Bought Give the next Flying monster you buy +1 Multicast.",
+      "spritePath": "/game/25600878/monster/aviarab.png"
+    },
+    {
+      "id": "berroon",
+      "slug": "berroon",
+      "name": "Berroon",
+      "description": "The next 1 items in your shop will be Berries.",
+      "spritePath": "/game/25600878/monster/berroon.png"
+    },
+    {
+      "id": "blessom",
+      "slug": "blessom",
+      "name": "Blessom",
+      "description": "At the start of each day, monsters in your shop gain +50 Damage.",
+      "spritePath": "/game/25600878/monster/blessom.png"
+    },
+    {
+      "id": "bonshell",
+      "slug": "bonshell",
+      "name": "Bonshell",
+      "description": "+80 Damage and +80 Shield for this battle.",
+      "spritePath": "/game/25600878/monster/bonshell.png"
+    },
+    {
+      "id": "boomagon",
+      "slug": "boomagon",
+      "name": "Boomagon",
+      "description": "Give the ally behind +3% Cooldown Speed permanently.",
+      "spritePath": "/game/25600878/monster/boomagon.png"
+    },
+    {
+      "id": "brawlmantis",
+      "slug": "brawlmantis",
+      "name": "Brawlmantis",
+      "description": "This and Common allies gain +10 Damage permanently.",
+      "spritePath": "/game/25600878/monster/brawlmantis.png"
+    },
+    {
+      "id": "brimtoad",
+      "slug": "brimtoad",
+      "name": "Brimtoad",
+      "description": "+4 Burn and +4 Poison permanently.",
+      "spritePath": "/game/25600878/monster/brimtoad.png"
+    },
+    {
+      "id": "cinderfly",
+      "slug": "cinderfly",
+      "name": "Cinderfly",
+      "description": "After you buy a Bug monster, this gains +10% Cooldown Speed.",
+      "spritePath": "/game/25600878/monster/cinderfly.png"
+    },
+    {
+      "id": "cinnabark",
+      "slug": "cinnabark",
+      "name": "Cinnabark",
+      "description": "Has additional Shield equal to 100% of the Poison stacks on the enemy.",
+      "spritePath": "/game/25600878/monster/cinnabark.png"
+    },
+    {
+      "id": "alpinine",
+      "slug": "alpinine",
+      "name": "Craghorn",
+      "description": "When you use an item, this gains +20 Damage and Shield.",
+      "spritePath": "/game/25600878/monster/alpinine.png"
+    },
+    {
+      "id": "galvanade",
+      "slug": "galvanade",
+      "name": "Electranade",
+      "description": "Knockout self.",
+      "spritePath": "/game/25600878/monster/galvanade.png"
+    },
+    {
+      "id": "emburn",
+      "slug": "emburn",
+      "name": "Emburn",
+      "description": "On Knockout of this or an ally, this gains +3 Burn permanently.",
+      "spritePath": "/game/25600878/monster/emburn.png"
+    },
+    {
+      "id": "frizzly",
+      "slug": "frizzly",
+      "name": "Frizzly",
+      "description": "Trigger this.",
+      "spritePath": "/game/25600878/monster/frizzly.png"
+    },
+    {
+      "id": "gildshell",
+      "slug": "gildshell",
+      "name": "Gildshell",
+      "description": "+20 Sell Value permanently.",
+      "spritePath": "/game/25600878/monster/gildshell.png"
+    },
+    {
+      "id": "kappow",
+      "slug": "kappow",
+      "name": "Kappow",
+      "description": "Level up. This can level up indefinitely.",
+      "spritePath": "/game/25600878/monster/kappow.png"
+    },
+    {
+      "id": "nekoffin",
+      "slug": "nekoffin",
+      "name": "Nekoffin",
+      "description": "Gain a random non-unique Common Trinket.",
+      "spritePath": "/game/25600878/monster/nekoffin.png"
+    },
+    {
+      "id": "noxnimbus",
+      "slug": "noxnimbus",
+      "name": "Noxnimbus",
+      "description": "Adjacent Toxic allies gain +3 Poison for this battle.",
+      "spritePath": "/game/25600878/monster/noxnimbus.png"
+    },
+    {
+      "id": "pawsperity",
+      "slug": "pawsperity",
+      "name": "Pawsperity",
+      "description": "Gain a random non-unique Common Trinket.",
+      "spritePath": "/game/25600878/monster/pawsperity.png"
+    },
+    {
+      "id": "plunderbird",
+      "slug": "plunderbird",
+      "name": "Plunderbird",
+      "description": "Gain $1.",
+      "spritePath": "/game/25600878/monster/plunderbird.png"
+    },
+    {
+      "id": "puffloon",
+      "slug": "puffloon",
+      "name": "Puffloon",
+      "description": "Trigger this when adjacent Toxic allies trigger. (Except other Puffloon)",
+      "spritePath": "/game/25600878/monster/puffloon.png"
+    },
+    {
+      "id": "infernade",
+      "slug": "infernade",
+      "name": "Pyronade",
+      "description": "Knockout self.",
+      "spritePath": "/game/25600878/monster/infernade.png"
+    },
+    {
+      "id": "runerock",
+      "slug": "runerock",
+      "name": "Runerock",
+      "description": "Remove 15 stacks of every debuff on your team.",
+      "spritePath": "/game/25600878/monster/runerock.png"
+    },
+    {
+      "id": "shogapede",
+      "slug": "shogapede",
+      "name": "Shogapede",
+      "description": "After you buy a Bug monster, this gains +10% Cooldown Speed.",
+      "spritePath": "/game/25600878/monster/shogapede.png"
+    },
+    {
+      "id": "sukoi",
+      "slug": "sukoi",
+      "name": "Sukoi",
+      "description": "On the first cast, level up the ally above for this battle (max level 3).",
+      "spritePath": "/game/25600878/monster/sukoi.png"
+    },
+    {
+      "id": "aster",
+      "slug": "aster",
+      "name": "Aster",
+      "description": "Adjacent Water allies gain +25 Heal permanently.",
+      "spritePath": "/game/25600878/monster/aster.png"
+    },
+    {
+      "id": "cherubble",
+      "slug": "cherubble",
+      "name": "Cherubble",
+      "description": "Give adjacent allies Protect 1.",
+      "spritePath": "/game/25600878/monster/cherubble.png"
+    },
+    {
+      "id": "cicadence",
+      "slug": "cicadence",
+      "name": "Cicadence",
+      "description": "Trigger the Bug ally above.",
+      "spritePath": "/game/25600878/monster/cicadence.png"
+    },
+    {
+      "id": "cordycant",
+      "slug": "cordycant",
+      "name": "Cordycant",
+      "description": "On Bought Give the next monster you buy Toxic typing and +8 Poison.",
+      "spritePath": "/game/25600878/monster/cordycant.png"
+    },
+    {
+      "id": "dirgefin",
+      "slug": "dirgefin",
+      "name": "Dirgefin",
+      "description": "Knockout all Common allies and enemies.",
+      "spritePath": "/game/25600878/monster/dirgefin.png"
+    },
+    {
+      "id": "dollhime",
+      "slug": "dollhime",
+      "name": "Dollhime",
+      "description": "On Trinket Gained +40 Damage permanently.",
+      "spritePath": "/game/25600878/monster/dollhime.png"
+    },
+    {
+      "id": "dracana",
+      "slug": "dracana",
+      "name": "Dracana",
+      "description": "Charge the ally behind by 1 second(s). (Dracana can't receive charge)",
+      "spritePath": "/game/25600878/monster/dracana.png"
+    },
+    {
+      "id": "formiqueen",
+      "slug": "formiqueen",
+      "name": "Formiqueen",
+      "description": "Adjacent Common allies have +25% Cooldown Speed.",
+      "spritePath": "/game/25600878/monster/formiqueen.png"
+    },
+    {
+      "id": "ignit",
+      "slug": "ignit",
+      "name": "Ignit",
+      "description": "Evolve.",
+      "spritePath": "/game/25600878/monster/ignit.png"
+    },
+    {
+      "id": "ironcore",
+      "slug": "ironcore",
+      "name": "Ironcore",
+      "description": "Charge adjacent Electric allies by 1 second(s). (Ironcore can't receive charge)",
+      "spritePath": "/game/25600878/monster/ironcore.png"
+    },
+    {
+      "id": "kickrane",
+      "slug": "kickrane",
+      "name": "Kickrane",
+      "description": "This and all your allies gain +20 Damage permanently.",
+      "spritePath": "/game/25600878/monster/kickrane.png"
+    },
+    {
+      "id": "lignite",
+      "slug": "lignite",
+      "name": "Lignite",
+      "description": "Has additional Damage equal to 15 times this monster's Burn.",
+      "spritePath": "/game/25600878/monster/lignite.png"
+    },
+    {
+      "id": "lumijel",
+      "slug": "lumijel",
+      "name": "Lumijel",
+      "description": "Allies of level 3 or above gain +15 Damage and +15 Heal permanently.",
+      "spritePath": "/game/25600878/monster/lumijel.png"
+    },
+    {
+      "id": "magmalith",
+      "slug": "magmalith",
+      "name": "Magmalith",
+      "description": "Give the Fire ally above +2 Burn permanently.",
+      "spritePath": "/game/25600878/monster/magmalith.png"
+    },
+    {
+      "id": "noxalith",
+      "slug": "noxalith",
+      "name": "Noxalith",
+      "description": "Give the Toxic ally above +3 Poison permanently.",
+      "spritePath": "/game/25600878/monster/noxalith.png"
+    },
+    {
+      "id": "petrirex",
+      "slug": "petrirex",
+      "name": "Petrirex",
+      "description": "Knockout adjacent allies and gain +20 Shield permanently for each ally Knockout.",
+      "spritePath": "/game/25600878/monster/petrirex.png"
+    },
+    {
+      "id": "pyrokami",
+      "slug": "pyrokami",
+      "name": "Pyrokami",
+      "description": "+10 Burn for this battle.",
+      "spritePath": "/game/25600878/monster/pyrokami.png"
+    },
+    {
+      "id": "rhizuka",
+      "slug": "rhizuka",
+      "name": "Rhizuka",
+      "description": "Trigger this when an ally applies Shield. (Except other Rhizuka)",
+      "spritePath": "/game/25600878/monster/rhizuka.png"
+    },
+    {
+      "id": "sarudo",
+      "slug": "sarudo",
+      "name": "Sarudo",
+      "description": "On Battle Lost Activate the On Victory abilities of adjacent allies 1 time(s).",
+      "spritePath": "/game/25600878/monster/sarudo.png"
+    },
+    {
+      "id": "shikitsune",
+      "slug": "shikitsune",
+      "name": "Shikitsune",
+      "description": "Knocked-out allies are revived and gain +15% Cooldown Speed for this battle.",
+      "spritePath": "/game/25600878/monster/shikitsune.png"
+    },
+    {
+      "id": "sproach",
+      "slug": "sproach",
+      "name": "Sproach",
+      "description": "On Bought +30 Damage permanently for each life lost this run.",
+      "spritePath": "/game/25600878/monster/sproach.png"
+    },
+    {
+      "id": "stalagrove",
+      "slug": "stalagrove",
+      "name": "Stalagrove",
+      "description": "When you receive shield, this gains Damage for this battle equal to 15% of the amount shielded.",
+      "spritePath": "/game/25600878/monster/stalagrove.png"
+    },
+    {
+      "id": "steamscuttle",
+      "slug": "steamscuttle",
+      "name": "Steamscuttle",
+      "description": "Charge adjacent Fire and Water allies by 1 second(s). (Steamscuttle can't receive charge)",
+      "spritePath": "/game/25600878/monster/steamscuttle.png"
+    },
+    {
+      "id": "talonite",
+      "slug": "talonite",
+      "name": "Talonite",
+      "description": "+20 Shield permanently for each Rock ally and +1 Multicast permanently for each Flying ally.",
+      "spritePath": "/game/25600878/monster/talonite.png"
+    },
+    {
+      "id": "thorntail",
+      "slug": "thorntail",
+      "name": "Thorntail",
+      "description": "When allies inflict Poison, this gains +8 Damage permanently.",
+      "spritePath": "/game/25600878/monster/thorntail.png"
+    },
+    {
+      "id": "vipair",
+      "slug": "vipair",
+      "name": "Vipair",
+      "description": "On Trinket Gained +4 Poison permanently.",
+      "spritePath": "/game/25600878/monster/vipair.png"
+    },
+    {
+      "id": "voltalith",
+      "slug": "voltalith",
+      "name": "Voltalith",
+      "description": "Give the Electric ally above +2 Shock permanently.",
+      "spritePath": "/game/25600878/monster/voltalith.png"
+    },
+    {
+      "id": "aegistruct",
+      "slug": "aegistruct",
+      "name": "Aegistruct",
+      "description": "Gain Shield for this battle equal to the Shield of adjacent allies. (Except other Aegistruct)",
+      "spritePath": "/game/25600878/monster/aegistruct.png"
+    },
+    {
+      "id": "cawnushi",
+      "slug": "cawnushi",
+      "name": "Cawnushi",
+      "description": "On Knockout of any monster, this gains +60 Damage permanently.",
+      "spritePath": "/game/25600878/monster/cawnushi.png"
+    },
+    {
+      "id": "celestia",
+      "slug": "celestia",
+      "name": "Celestia",
+      "description": "Disable abilities of all Ongoing monsters in this row.",
+      "spritePath": "/game/25600878/monster/celestia.png"
+    },
+    {
+      "id": "clawnetic",
+      "slug": "clawnetic",
+      "name": "Clawnetic",
+      "description": "Whenever an ally inflicts Shock, Charge this by 1.0 second(s).",
+      "spritePath": "/game/25600878/monster/clawnetic.png"
+    },
+    {
+      "id": "coalem",
+      "slug": "coalem",
+      "name": "Coalem",
+      "description": "Trigger this.",
+      "spritePath": "/game/25600878/monster/coalem.png"
+    },
+    {
+      "id": "danuki",
+      "slug": "danuki",
+      "name": "Danuki",
+      "description": "On ally knockout, this gains 70% of their Damage for this battle. (Except other Danuki)",
+      "spritePath": "/game/25600878/monster/danuki.png"
+    },
+    {
+      "id": "dragon_egg_0",
+      "slug": "dragon-egg-0",
+      "name": "Dragon Egg",
+      "description": "Hatches a Legendary Dragon monster in 2 days.",
+      "spritePath": "/game/25600878/monster/dragon_egg_0.png"
+    },
+    {
+      "id": "drumire",
+      "slug": "drumire",
+      "name": "Drumire",
+      "description": "When a Toxic ally casts, give it +5% Cooldown Speed for this battle.",
+      "spritePath": "/game/25600878/monster/drumire.png"
+    },
+    {
+      "id": "dryadell",
+      "slug": "dryadell",
+      "name": "Dryadell",
+      "description": "Trigger the Grass ally above.",
+      "spritePath": "/game/25600878/monster/dryadell.png"
+    },
+    {
+      "id": "emberpaw",
+      "slug": "emberpaw",
+      "name": "Emberpaw",
+      "description": "Evolve when your team inflicts Burn 25 times.",
+      "spritePath": "/game/25600878/monster/emberpaw.png"
+    },
+    {
+      "id": "flarilisk",
+      "slug": "flarilisk",
+      "name": "Flarilisk",
+      "description": "Evolve.",
+      "spritePath": "/game/25600878/monster/flarilisk.png"
+    },
+    {
+      "id": "fumungus",
+      "slug": "fumungus",
+      "name": "Fumungus",
+      "description": "Has additional Damage equal to 100% of the Poison stacks on the enemy.",
+      "spritePath": "/game/25600878/monster/fumungus.png"
+    },
+    {
+      "id": "gemwing",
+      "slug": "gemwing",
+      "name": "Gemwing",
+      "description": "Activate the On Bought ability of the ally above 1 time(s).",
+      "spritePath": "/game/25600878/monster/gemwing.png"
+    },
+    {
+      "id": "ginsage",
+      "slug": "ginsage",
+      "name": "Ginsage",
+      "description": "Adjacent Grass allies gain +7% Cooldown Speed permanently.",
+      "spritePath": "/game/25600878/monster/ginsage.png"
+    },
+    {
+      "id": "mallogre",
+      "slug": "mallogre",
+      "name": "Mallogre",
+      "description": "+4 Damage and +4 Shield permanently for each Trinket that you own.",
+      "spritePath": "/game/25600878/monster/mallogre.png"
+    },
+    {
+      "id": "ninflora",
+      "slug": "ninflora",
+      "name": "Ninflora",
+      "description": "This and your Grass allies gain +10% Cooldown Speed permanently.",
+      "spritePath": "/game/25600878/monster/ninflora.png"
+    },
+    {
+      "id": "oniclaw",
+      "slug": "oniclaw",
+      "name": "Oniclaw",
+      "description": "Whenever your team inflicts Burn, gain +50% Damage this battle.",
+      "spritePath": "/game/25600878/monster/oniclaw.png"
+    },
+    {
+      "id": "opalion",
+      "slug": "opalion",
+      "name": "Opalion",
+      "description": "Trigger 2 random Rock allies. (Except other Opalion)",
+      "spritePath": "/game/25600878/monster/opalion.png"
+    },
+    {
+      "id": "orcana",
+      "slug": "orcana",
+      "name": "Orcana",
+      "description": "Has an additional +160 Damage and +160 Heal for each ally of level 3 or above.",
+      "spritePath": "/game/25600878/monster/orcana.png"
+    },
+    {
+      "id": "prismagon",
+      "slug": "prismagon",
+      "name": "Prismagon",
+      "description": "+10 Damage permanently for each unique type on your team.",
+      "spritePath": "/game/25600878/monster/prismagon.png"
+    },
+    {
+      "id": "pylong",
+      "slug": "pylong",
+      "name": "Pylong",
+      "description": "Ally behind has +100% Shock.",
+      "spritePath": "/game/25600878/monster/pylong.png"
+    },
+    {
+      "id": "reapra",
+      "slug": "reapra",
+      "name": "Reapra",
+      "description": "Knockout the enemy opposite of this.",
+      "spritePath": "/game/25600878/monster/reapra.png"
+    },
+    {
+      "id": "shelldra",
+      "slug": "shelldra",
+      "name": "Shelldra",
+      "description": "Every 4.0 seconds, +1 Multicast for this battle.",
+      "spritePath": "/game/25600878/monster/shelldra.png"
+    },
+    {
+      "id": "shrinell",
+      "slug": "shrinell",
+      "name": "Shrinell",
+      "description": "Ally behind has +0.5% Cooldown Speed for each Trinket that you own.",
+      "spritePath": "/game/25600878/monster/shrinell.png"
+    },
+    {
+      "id": "sirenade",
+      "slug": "sirenade",
+      "name": "Sirenade",
+      "description": "Remove 20% of debuffs on your team.",
+      "spritePath": "/game/25600878/monster/sirenade.png"
+    },
+    {
+      "id": "snapscald",
+      "slug": "snapscald",
+      "name": "Snapscald",
+      "description": "Trigger this when an ally of level 3 or above casts. (Except other Snapscald)",
+      "spritePath": "/game/25600878/monster/snapscald.png"
+    },
+    {
+      "id": "tengusto",
+      "slug": "tengusto",
+      "name": "Tengusto",
+      "description": "Has an additional +60 Damage for each Badge that you have.",
+      "spritePath": "/game/25600878/monster/tengusto.png"
+    },
+    {
+      "id": "wishwash",
+      "slug": "wishwash",
+      "name": "Wishwash",
+      "description": "Gain a random non-unique Rare Trinket.",
+      "spritePath": "/game/25600878/monster/wishwash.png"
+    },
+    {
+      "id": "zephyrex",
+      "slug": "zephyrex",
+      "name": "Zephyrex",
+      "description": "Give the Flying ally in front +1 Multicast permanently. (Zephyrex can't have Multicast)",
+      "spritePath": "/game/25600878/monster/zephyrex.png"
+    },
+    {
+      "id": "blixie",
+      "slug": "blixie",
+      "name": "Blixie",
+      "description": "Give the Fire ally behind this monster's Burn for this battle.",
+      "spritePath": "/game/25600878/monster/blixie.png"
+    },
+    {
+      "id": "cairnage",
+      "slug": "cairnage",
+      "name": "Cairnage",
+      "description": "Allies gain Damage for this battle equal to 0.8x their Shield.",
+      "spritePath": "/game/25600878/monster/cairnage.png"
+    },
+    {
+      "id": "cobrex",
+      "slug": "cobrex",
+      "name": "Cobrex",
+      "description": "Whenever an ally inflicts Poison, Charge this by 1 second(s).",
+      "spritePath": "/game/25600878/monster/cobrex.png"
+    },
+    {
+      "id": "dragonarch",
+      "slug": "dragonarch",
+      "name": "Draconarch",
+      "description": "Activate the On Battle Start abilities of adjacent allies and increase this monster's Cooldown by 6 for this battle.",
+      "spritePath": "/game/25600878/monster/dragonarch.png"
+    },
+    {
+      "id": "fernfowl",
+      "slug": "fernfowl",
+      "name": "Fernfowl",
+      "description": "Evolve after your team deals 15000 non-status Damage.",
+      "spritePath": "/game/25600878/monster/fernfowl.png"
+    },
+    {
+      "id": "gachapod",
+      "slug": "gachapod",
+      "name": "Gachapod",
+      "description": "When this triggers, gain a random non-unique Common Trinket, then improve this ability for this battle.",
+      "spritePath": "/game/25600878/monster/gachapod.png"
+    },
+    {
+      "id": "gaiadrasil",
+      "slug": "gaiadrasil",
+      "name": "Gaiadrasil",
+      "description": "Has additional Damage equal to 100% of the total Damage of adjacent allies. (Except other Gaiadrasil)",
+      "spritePath": "/game/25600878/monster/gaiadrasil.png"
+    },
+    {
+      "id": "galvanine",
+      "slug": "galvanine",
+      "name": "Galvanine",
+      "description": "+50% Cooldown Speed and +2 Shock for this battle.",
+      "spritePath": "/game/25600878/monster/galvanine.png"
+    },
+    {
+      "id": "geminiss",
+      "slug": "geminiss",
+      "name": "Geminiss",
+      "description": "Give adjacent allies +50% Shield for this battle.",
+      "spritePath": "/game/25600878/monster/geminiss.png"
+    },
+    {
+      "id": "miasmaw",
+      "slug": "miasmaw",
+      "name": "Miasmaw",
+      "description": "Gain Poison for this battle equal to the total Poison of your allies. (Except other Miasmaw)",
+      "spritePath": "/game/25600878/monster/miasmaw.png"
+    },
+    {
+      "id": "onsetra",
+      "slug": "onsetra",
+      "name": "Onsetra",
+      "description": "The ally behind applies its Ongoing abilities 1 additional time(s).",
+      "spritePath": "/game/25600878/monster/onsetra.png"
+    },
+    {
+      "id": "ouroblaze",
+      "slug": "ouroblaze",
+      "name": "Ouroblaze",
+      "description": "Has additional Burn equal to 50% of the Burn stacks on the enemy.",
+      "spritePath": "/game/25600878/monster/ouroblaze.png"
+    },
+    {
+      "id": "pompummel",
+      "slug": "pompummel",
+      "name": "Pompummel",
+      "description": "Activate the On Victory ability of the ally above.",
+      "spritePath": "/game/25600878/monster/pompummel.png"
+    },
+    {
+      "id": "quillustrous",
+      "slug": "quillustrous",
+      "name": "Quillustrous",
+      "description": "Has additional Damage equal to 50% of the total Damage of your allies. (Except other Quillustrous)",
+      "spritePath": "/game/25600878/monster/quillustrous.png"
+    },
+    {
+      "id": "saberhorn",
+      "slug": "saberhorn",
+      "name": "Saberhorn",
+      "description": "Give the ally in front +1 Multicast and increase this monster's Cooldown by 8 seconds for this battle.",
+      "spritePath": "/game/25600878/monster/saberhorn.png"
+    },
+    {
+      "id": "sproutquill",
+      "slug": "sproutquill",
+      "name": "Sproutquill",
+      "description": "Evolve after your team deals 10000 non-status Damage.",
+      "spritePath": "/game/25600878/monster/sproutquill.png"
+    },
+    {
+      "id": "stellagon",
+      "slug": "stellagon",
+      "name": "Stellagon",
+      "description": "Adjacent allies with no abilities have +2 Multicast.",
+      "spritePath": "/game/25600878/monster/stellagon.png"
+    },
+    {
+      "id": "torrantler",
+      "slug": "torrantler",
+      "name": "Torrantler",
+      "description": "Trigger adjacent Water allies. (Except other Torrantler)",
+      "spritePath": "/game/25600878/monster/torrantler.png"
+    },
+    {
+      "id": "tsunamere",
+      "slug": "tsunamere",
+      "name": "Tsunamere",
+      "description": "Level up all adjacent allies for this battle (max level 3).",
+      "spritePath": "/game/25600878/monster/tsunamere.png"
+    },
+    {
+      "id": "vengrieve",
+      "slug": "vengrieve",
+      "name": "Vengrieve",
+      "description": "Knockout the monster opposite of this and gain their stats for this battle (except Cooldown).",
+      "spritePath": "/game/25600878/monster/vengrieve.png"
+    },
+    {
+      "id": "aerophim",
+      "slug": "aerophim",
+      "name": "Aerophim",
+      "description": "Give adjacent allies +1 Multicast permanently and transform them into random monsters of their rarity.",
+      "spritePath": "/game/25600878/monster/aerophim.png"
+    },
+    {
+      "id": "cosmivore",
+      "slug": "cosmivore",
+      "name": "Cosmivore",
+      "description": "When rerolling the shop, gain 20% of the total stats of the monsters remaining in the shop (excluding Multicast and Cooldown).",
+      "spritePath": "/game/25600878/monster/cosmivore.png"
+    },
+    {
+      "id": "faebloom",
+      "slug": "faebloom",
+      "name": "Faebloom",
+      "description": "Mythical Item may appear in your shop. Ongoing Adjacent allies have +10% Damage per Mythical Item used.",
+      "spritePath": "/game/25600878/monster/faebloom.png"
+    },
+    {
+      "id": "goldora",
+      "slug": "goldora",
+      "name": "Goldora",
+      "description": "On the first cast, gain 1 random non-unique Legendary Trinket(s) for each Legendary ally.",
+      "spritePath": "/game/25600878/monster/goldora.png"
+    },
+    {
+      "id": "missing_no",
+      "slug": "missing-no",
+      "name": "MissingN.",
+      "description": "For this battle, transform into a random monster 1 rarity above your shop's highest available rarity.",
+      "spritePath": "/game/25600878/monster/missing_no.png"
+    },
+    {
+      "id": "null_00",
+      "slug": "null-00",
+      "name": "NULL-00",
+      "description": "Allies and enemies in this row have +3 Cooldown.",
+      "spritePath": "/game/25600878/monster/null_00.png"
+    },
+    {
+      "id": "null_7f",
+      "slug": "null-7f",
+      "name": "NULL-7F",
+      "description": "Knockout a random enemy.",
+      "spritePath": "/game/25600878/monster/null_7f.png"
+    },
+    {
+      "id": "null_ff",
+      "slug": "null-ff",
+      "name": "NULL-FF",
+      "description": "Trigger this and allies in this row.",
+      "spritePath": "/game/25600878/monster/null_ff.png"
+    },
+    {
+      "id": "omnichrome",
+      "slug": "omnichrome",
+      "name": "Omnichrome",
+      "description": "Gain 80% of the stats of the enemy monster with the highest stats permanently (excluding Multicast and Cooldown).",
+      "spritePath": "/game/25600878/monster/omnichrome.png"
+    },
+    {
+      "id": "rigalord",
+      "slug": "rigalord",
+      "name": "Rigalord",
+      "description": "Spawn exact copies of the Batomon this devoured in empty slots the bottom row. They ONLY trigger when this casts.",
+      "spritePath": "/game/25600878/monster/rigalord.png"
+    },
+    {
+      "id": "riglet",
+      "slug": "riglet",
+      "name": "Riglet",
+      "description": "At the start of the next day, devour the ally in front and evolve into Rigalord.",
+      "spritePath": "/game/25600878/monster/riglet.png"
+    }
+  ]
+}

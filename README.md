@@ -2,7 +2,7 @@
 
 An experimental, GPLv3 Android companion for AYN Thor and Android handhelds. It is designed for a split-display setup: Batomon stays on the upper/default display while Companion uses the Thor lower touchscreen (1240×1080). The app currently ships a diagnostic capture pipeline and an honest, fixture-driven recognition shell; it does not claim to recognize live Batomon state until real Thor fixtures have been collected and calibrated.
 
-## Status: 0.2.0 diagnostic/manual MVP
+## Status: 0.3.0 diagnostic/manual MVP
 
 - Launches the activity on the smallest non-default display when Android exposes one; falls back to the current display.
 - Requests Android MediaProjection permission and captures the default display with an RGBA `ImageReader` in a foreground service.
@@ -11,6 +11,9 @@ An experimental, GPLv3 Android companion for AYN Thor and Android handhelds. It 
 - Includes Room models for local runs and observations plus Live/Runs/Comps/Dex/Settings lower-screen skeletons.
 - Adds functional manual run entry: editable mode/opening board, round wins/losses, lives, finish result, persisted history, and recaps.
 - Adds a searchable text-only Balance 24 item reference catalog; artwork is not redistributed while licensing is pending. See [REFERENCE.md](REFERENCE.md).
+- Expands the offline reference to 136 Batomon, 93 trinkets, 24 trainers, and 40 items, with detail dialogs and category/search controls.
+- Replaces free-text opening-board entry with six structured Batomon selectors.
+- Adds history filtering, opening-board grouping, round win-rate summary, safe delete confirmation, and JSON export.
 - Adds an explicit SAF export for one redacted diagnostic frame; nothing is saved unless the user chooses a destination.
 - Adds resolution-normalized ROIs, perceptual hashes, template matching, confidence thresholds, and golden tests. No live-game accuracy is claimed.
 
@@ -46,3 +49,7 @@ The capture lifecycle follows the publicly documented pattern used by [Bifrost](
 ## License
 
 GPLv3. See [LICENSE](LICENSE). Batomon and AYN are trademarks of their respective owners. This is an independent community project.
+
+## Updating from v0.2.0
+
+v0.2.0 was debug-signed. v0.3.0 is the first durable release signed with the retained project keystore, so Android cannot update a v0.2.0 debug installation in place; uninstall v0.2.0 first (local v0.2 data will be removed) or use a separate package install path.

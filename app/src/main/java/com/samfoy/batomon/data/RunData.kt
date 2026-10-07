@@ -36,6 +36,7 @@ interface RunDao {
     @Update suspend fun update(run: RunEntity)
     @Update fun updateBlocking(run: RunEntity)
     @Insert fun insertBlocking(run: RunEntity): Long
+    @Delete fun deleteBlocking(run: RunEntity)
     @Insert suspend fun insertObservation(observation: ObservationEntity)
 }
 

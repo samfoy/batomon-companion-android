@@ -1,0 +1,179 @@
+{
+  "schema": 1,
+  "reference": "Batomon trainer reference",
+  "balance": "24",
+  "gameBuild": "1.2.0 / 25600878",
+  "source": "https://batomon.com/trainers",
+  "sourceAccessed": "2026-10-07",
+  "assetPolicy": "Text metadata only; sprite paths are provenance and artwork is not redistributed while licensing is pending.",
+  "entries": [
+    {
+      "id": "mysterious_trainer",
+      "slug": "mysterious-trainer",
+      "name": "???",
+      "description": "Gain MissingN.",
+      "spritePath": "/game/25600878/trainer/mysterious_trainer.png"
+    },
+    {
+      "id": "black_belt",
+      "slug": "black-belt",
+      "name": "Black Belt",
+      "description": "On Battle Start If you have exactly 1 Fighting monster on your team, activate its On Victory ability.",
+      "spritePath": "/game/25600878/trainer/black_belt.png"
+    },
+    {
+      "id": "bug_catcher",
+      "slug": "bug-catcher",
+      "name": "Bug Catcher",
+      "description": "The first Bug monster you buy each day is free.",
+      "spritePath": "/game/25600878/trainer/bug_catcher.png"
+    },
+    {
+      "id": "burglar",
+      "slug": "burglar",
+      "name": "Burglar",
+      "description": "Trinket gifts only offer 2 choices, but you can take both of them.",
+      "spritePath": "/game/25600878/trainer/burglar.png"
+    },
+    {
+      "id": "pyromaniac",
+      "slug": "pyromaniac",
+      "name": "Chef",
+      "description": "Your singled-typed monsters gain Fire typing. Your Fire monsters have +2 Burn.",
+      "spritePath": "/game/25600878/trainer/pyromaniac.png"
+    },
+    {
+      "id": "chemist",
+      "slug": "chemist",
+      "name": "Chemist",
+      "description": "Your Toxic monsters have +3 Poison. When any monster levels up, increase this effect by +1 Poison.",
+      "spritePath": "/game/25600878/trainer/chemist.png"
+    },
+    {
+      "id": "egg_breeder",
+      "slug": "egg-breeder",
+      "name": "Egg Breeder",
+      "description": "Gain a Purple Egg that hatches into a level 2 Super Rare monster in 5 days.",
+      "spritePath": "/game/25600878/trainer/egg_breeder.png"
+    },
+    {
+      "id": "gamer",
+      "slug": "gamer",
+      "name": "Gamer",
+      "description": "Gain a Mythical monster and $30 on day 9.",
+      "spritePath": "/game/25600878/trainer/gamer.png"
+    },
+    {
+      "id": "gentleman",
+      "slug": "gentleman",
+      "name": "Gentleman",
+      "description": "From day 4 onwards, your shop no longer stocks Common or Uncommon monsters.",
+      "spritePath": "/game/25600878/trainer/gentleman.png"
+    },
+    {
+      "id": "youngster_f",
+      "slug": "youngster-f",
+      "name": "Lucky Girl",
+      "description": "SHINY monsters are more likely to appear.",
+      "spritePath": "/game/25600878/trainer/youngster_f.png"
+    },
+    {
+      "id": "mad_scientist",
+      "slug": "mad-scientist",
+      "name": "Mad Scientist",
+      "description": "On day 7, transform monsters on your active team into random level 1 Legendary monsters.",
+      "spritePath": "/game/25600878/trainer/mad_scientist.png"
+    },
+    {
+      "id": "masked_man",
+      "slug": "masked-man",
+      "name": "Masked Man",
+      "description": "Every 4 days, choose a trainer and gain their ability.",
+      "spritePath": "/game/25600878/trainer/masked_man.png"
+    },
+    {
+      "id": "monster_ranger",
+      "slug": "monster-ranger",
+      "name": "Monster Ranger",
+      "description": "Start with an Uncommon monster. Get another copy of that monster every 2 days.",
+      "spritePath": "/game/25600878/trainer/monster_ranger.png"
+    },
+    {
+      "id": "musician",
+      "slug": "musician",
+      "name": "Musician",
+      "description": "If you have exactly 1 Electric monster on your team, it will have +150% Shock.",
+      "spritePath": "/game/25600878/trainer/musician.png"
+    },
+    {
+      "id": "painter",
+      "slug": "painter",
+      "name": "Painter",
+      "description": "Random species will be painted with every type this run.",
+      "spritePath": "/game/25600878/trainer/painter.png"
+    },
+    {
+      "id": "redhead",
+      "slug": "redhead",
+      "name": "Redhead",
+      "description": "On Victory Give your Fire monsters +3 Burn permanently.",
+      "spritePath": "/game/25600878/trainer/redhead.png"
+    },
+    {
+      "id": "lady",
+      "slug": "lady",
+      "name": "Rich Lady",
+      "description": "Gain shop rank +2 and $10.",
+      "spritePath": "/game/25600878/trainer/lady.png"
+    },
+    {
+      "id": "scavenger",
+      "slug": "scavenger",
+      "name": "Scavenger",
+      "description": "Gain an additional copy of each non-unique Common or Uncommon Trinket from a gift.",
+      "spritePath": "/game/25600878/trainer/scavenger.png"
+    },
+    {
+      "id": "shopkeeper",
+      "slug": "shopkeeper",
+      "name": "Shopkeeper",
+      "description": "Your shop stocks Item 1 rarity tier higher and cost 15% less.",
+      "spritePath": "/game/25600878/trainer/shopkeeper.png"
+    },
+    {
+      "id": "smuggler",
+      "slug": "smuggler",
+      "name": "Smuggler",
+      "description": "Batomon from other regions appear in your shop and cost 25% less.",
+      "spritePath": "/game/25600878/trainer/smuggler.png"
+    },
+    {
+      "id": "swim_coach",
+      "slug": "swim-coach",
+      "name": "Swim Coach",
+      "description": "Gain a random Water monster each day.",
+      "spritePath": "/game/25600878/trainer/swim_coach.png"
+    },
+    {
+      "id": "treasure_hunter",
+      "slug": "treasure-hunter",
+      "name": "Treasure Hunter",
+      "description": "When you get Trinket gifts, your choices are 1 rarity tier higher.",
+      "spritePath": "/game/25600878/trainer/treasure_hunter.png"
+    },
+    {
+      "id": "twins",
+      "slug": "twins",
+      "name": "Twins",
+      "description": "When monsters merge into level 3, gain an exact copy with a sell value of 0.",
+      "spritePath": "/game/25600878/trainer/twins.png"
+    },
+    {
+      "id": "youngster_m",
+      "slug": "youngster-m",
+      "name": "Youngster",
+      "description": "Gain 3 free rerolls every day.",
+      "spritePath": "/game/25600878/trainer/youngster_m.png"
+    }
+  ]
+}
