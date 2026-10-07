@@ -15,3 +15,44 @@ jobs:
       - run: ./gradlew testDebugUnitTest lintDebug assembleDebug
       - uses: actions/upload-artifact@v4
         with: { name: batomon-companion-debug, path: app/build/outputs/apk/debug/*.apk }
+
+  instrumentation:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with: { distribution: temurin, java-version: '17' }
+      - uses: reactivecircus/android-emulator-runner@v2
+        with:
+          api-level: 35
+          target: google_apis
+          arch: x86_64
+          profile: pixel_2
+          emulator-options: -no-window -gpu swiftshader_indirect -no-snapshot -noaudio -no-boot-anim
+          disable-animations: true
+          script: |
+            set -euo pipefail
+            ./gradlew :app:assembleDebug
+            adb install -r app/build/outputs/apk/debug/app-debug.apk
+            adb shell settings delete global overlay_display_devices || true
+            ./gradlew :app:connectedDebugAndroidTest -Pandroid.testInstrumentationRunnerArguments.class=com.samfoy.batomon.MainActivityPrimaryTest
+            adb shell settings put global overlay_display_devices '1240x1080/160'
+            adb shell am force-stop com.samfoy.batomon
+            ./gradlew :app:connectedDebugAndroidTest -Pandroid.testInstrumentationRunnerArguments.class=com.samfoy.batomon.MainActivitySecondaryDisplayTest
+            ./gradlew :app:connectedDebugAndroidTest -Pandroid.testInstrumentationRunnerArguments.class=com.samfoy.batomon.data.RunPersistenceTest
+      - name: Collect emulator evidence
+        if: always()
+        run: |
+          mkdir -p artifacts
+          adb devices -l > artifacts/adb-devices.txt || true
+          adb shell getprop > artifacts/getprop.txt || true
+          adb shell dumpsys display > artifacts/dumpsys-display.txt || true
+          adb shell dumpsys activity activities > artifacts/dumpsys-activity.txt || true
+          adb logcat -d -v threadtime > artifacts/logcat.txt || true
+          adb exec-out screencap -p > artifacts/screenshot.png || true
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: batomon-emulator-evidence
+          path: artifacts/
+          if-no-files-found: warn

@@ -13,8 +13,8 @@
 
 ## What this build cannot establish
 
-The emulator can test the Android lifecycle and UI but cannot prove AYN's exact firmware routing. The MVP contains no real game recognizers, so `UNKNOWN` is expected. Collect private, permission-cleared crops from representative title/shop/battle/result screens before adding recognizers and accuracy tests.
+The emulator can test the Android lifecycle and UI but cannot prove AYN's exact firmware routing. The shipped recognizer is experimental and conservatively returns low-confidence candidates until real fixtures calibrate it; `UNKNOWN` is expected. Collect private, permission-cleared crops from representative title/shop/battle/result screens before treating any candidate as game state or tuning thresholds.
 
 ## Emulator
 
-An emulator with a secondary display can exercise display selection. If the local host lacks KVM or an installed system image, run unit tests and UI build locally, then use physical Thor for the display/capture smoke test.
+The hosted Android CI job boots API 35 with hardware acceleration, runs the default-display UI test, then sets `overlay_display_devices=1240x1080/160` and verifies that the app reports a non-default display in `dumpsys activity`. If the local host lacks KVM or an installed system image, run unit tests and UI build locally, then use physical Thor for the MediaProjection/capture smoke test.

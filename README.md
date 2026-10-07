@@ -41,7 +41,7 @@ MediaProjection captures the default display on the Android configurations this 
 
 The testable boundary is `FrameRecognizer`. Add redacted, redistributable frame fixtures only when you have permission to share them, then implement recognizers under `recognition/` and add golden tests. The diagnostic MVP deliberately avoids synthetic accuracy claims. A future diagnostics screen will export selected crops for private calibration; raw captures are not uploaded.
 
-Local emulator evidence is recorded in [EMULATOR.md](EMULATOR.md). The host lacks KVM; bounded software-acceleration attempts reached guest display initialization but did not complete boot, so no emulator split-display or capture result is claimed.
+Local emulator evidence is recorded in [EMULATOR.md](EMULATOR.md). The host lacks KVM; bounded software-acceleration attempts reached guest display initialization but did not complete boot, so no local emulator split-display or capture result is claimed. GitHub Actions has a separate hosted API 35 x86_64 lane that runs the primary-display UI test, enables a 1240×1080 overlay display, checks the routed activity through `dumpsys activity`, and runs an in-memory Room persistence smoke test. Its logcat, display/activity dumps, device properties, and screenshot are uploaded as evidence, including on failure.
 
 ## Design notes
 
