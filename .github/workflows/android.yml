@@ -28,6 +28,15 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-java@v4
         with: { distribution: temurin, java-version: '17' }
+      - name: Allow the runner to use KVM
+        run: |
+          if [ -e /dev/kvm ]; then
+            sudo chmod 0666 /dev/kvm
+            ls -l /dev/kvm
+          else
+            echo '/dev/kvm is unavailable on this runner' >&2
+            exit 1
+          fi
       - uses: reactivecircus/android-emulator-runner@v2
         with:
           api-level: 35
