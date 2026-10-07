@@ -2,14 +2,17 @@
 
 An experimental, GPLv3 Android companion for AYN Thor and Android handhelds. It is designed for a split-display setup: Batomon stays on the upper/default display while Companion uses the Thor lower touchscreen (1240×1080). The app currently ships a diagnostic capture pipeline and an honest, fixture-driven recognition shell; it does not claim to recognize live Batomon state until real Thor fixtures have been collected and calibrated.
 
-## Status: 0.1.0 diagnostic MVP
+## Status: 0.2.0 diagnostic/manual MVP
 
 - Launches the activity on the smallest non-default display when Android exposes one; falls back to the current display.
 - Requests Android MediaProjection permission and captures the default display with an RGBA `ImageReader` in a foreground service.
 - Throttles samples, uses `acquireLatestImage()`, and closes all images/surfaces/threads on stop.
 - Keeps raw frames ephemeral. The current recognizer returns `UNKNOWN` until fixture-backed recognizers are added.
 - Includes Room models for local runs and observations plus Live/Runs/Comps/Dex/Settings lower-screen skeletons.
-- Includes unit tests for the recognition contract and temporal debounce.
+- Adds functional manual run entry: editable mode/opening board, round wins/losses, lives, finish result, persisted history, and recaps.
+- Adds a searchable text-only Balance 24 item reference catalog; artwork is not redistributed while licensing is pending. See [REFERENCE.md](REFERENCE.md).
+- Adds an explicit SAF export for one redacted diagnostic frame; nothing is saved unless the user chooses a destination.
+- Adds resolution-normalized ROIs, perceptual hashes, template matching, confidence thresholds, and golden tests. No live-game accuracy is claimed.
 
 ## Build
 
@@ -33,6 +36,8 @@ MediaProjection captures the default display on the Android configurations this 
 ## Emulator / fixture workflow
 
 The testable boundary is `FrameRecognizer`. Add redacted, redistributable frame fixtures only when you have permission to share them, then implement recognizers under `recognition/` and add golden tests. The diagnostic MVP deliberately avoids synthetic accuracy claims. A future diagnostics screen will export selected crops for private calibration; raw captures are not uploaded.
+
+Local emulator evidence is recorded in [EMULATOR.md](EMULATOR.md). The host lacks KVM; bounded software-acceleration attempts reached guest display initialization but did not complete boot, so no emulator split-display result is claimed.
 
 ## Design notes
 

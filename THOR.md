@@ -9,6 +9,7 @@
 - [ ] Capture status changes to `CAPTURING DEFAULT DISPLAY`
 - [ ] Display swap, sleep/wake, and game relaunch tested
 - [ ] Capture stops cleanly from notification and process restart
+- [ ] Settings → Save redacted current frame prompts for a user-selected URI and saves one marked PNG
 
 ## What this build cannot establish
 

@@ -9,7 +9,7 @@ MainActivity (lower display UI)
 CaptureService (foreground mediaProjection service)
   ├── VirtualDisplay → RGBA ImageReader
   ├── HandlerThread + acquireLatestImage() + 700 ms throttle
-  └── FrameRecognizer → temporal state machine (fixture-driven)
+  └── FrameRecognizer → normalized ROI/template match → temporal state machine (fixture-driven)
 
 Room
   ├── runs
@@ -27,3 +27,9 @@ Android's user-approved MediaProjection session is passed to `CaptureService`. T
 ## Recognition contract
 
 `FrameRecognizer` returns a scene and confidence. `SceneRecognizer` selects the highest-confidence recognizer, while `TemporalDebouncer` requires stable repeated results. There are no production recognizers in 0.1.0 because no real Batomon/Thor fixture set is included. This prevents the app from inventing a run from an uncalibrated screenshot.
+
+`NormalizedRect` and `ThorRegions` express regions as fractions of the captured display, so a 1920×1080 default display and a letterboxed capture can share recognizer configuration. `PerceptualHash` and `TemplateSceneRecognizer` provide a deterministic, pluggable baseline; templates must come from permission-cleared fixtures and are not bundled in v0.2.
+
+## Manual state and diagnostics
+
+Manual runs are saved in Room and record mode, opening-board notes, round outcomes, lives, finish result, and timestamps. MediaProjection state is broadcast from the foreground service to the lower-screen UI. A user can invoke a Storage Access Framework export from Settings; the next frame is copied to the chosen URI with top/bottom strips darkened and a visible diagnostic marker, then the in-memory image is released.
