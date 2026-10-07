@@ -13,9 +13,9 @@ import android.hardware.display.VirtualDisplay
 import android.media.projection.MediaProjection
 import android.media.projection.MediaProjectionManager
 import android.os.*
+import android.util.DisplayMetrics
 import android.util.Log
 import android.net.Uri
-import android.view.Surface
 import android.view.Display
 import androidx.core.app.NotificationCompat
 import androidx.lifecycle.LifecycleService
@@ -69,9 +69,15 @@ class CaptureService : LifecycleService() {
         try {
             val manager = getSystemService(MediaProjectionManager::class.java)
             projection = manager.getMediaProjection(code, data) ?: error("MediaProjection unavailable")
-            val metrics = resources.displayMetrics
+            val displayManager = getSystemService(DisplayManager::class.java)
+            val sourceDisplay = displayManager.getDisplay(Display.DEFAULT_DISPLAY)
+                ?: error("Default display unavailable")
+            val metrics = DisplayMetrics()
+            @Suppress("DEPRECATION")
+            sourceDisplay.getRealMetrics(metrics)
             val width = metrics.widthPixels.coerceAtLeast(320)
             val height = metrics.heightPixels.coerceAtLeast(240)
+            Log.i(TAG, "Capturing default display ${sourceDisplay.displayId} at ${width}x${height}, density=${metrics.densityDpi}")
             reader = ImageReader.newInstance(width, height, PixelFormat.RGBA_8888, 2)
             thread = HandlerThread("batomon-capture").also { it.start(); handler = Handler(it.looper) }
             recognizer = ExperimentalSceneRecognizer(SpriteBoardMatcher(loadSpriteTemplates(), CalibrationProfile.load(this).board))
@@ -87,7 +93,8 @@ class CaptureService : LifecycleService() {
                         pendingExportUri = null
                         exportRedactedFrame(image, uri)
                     }
-                    val processed = FrameBitmapConverter.fromImage(image, displayRotation(), MAX_RECOGNITION_DIMENSION)
+                    // MediaProjection delivers the current display orientation already applied.
+                    val processed = FrameBitmapConverter.fromImage(image, 0, MAX_RECOGNITION_DIMENSION)
                     try {
                         sampleCount++
                         val candidate = recognizer.recognize(processed.bitmap) ?: Recognition(Scene.UNKNOWN, 0f, "recognizer returned no candidate")
@@ -114,10 +121,6 @@ class CaptureService : LifecycleService() {
             stopCapture(emitState = false)
             stopSelf()
         }
-    }
-
-    private fun displayRotation(): Int = when (getSystemService(DisplayManager::class.java).getDisplay(Display.DEFAULT_DISPLAY)?.rotation) {
-        Surface.ROTATION_90 -> 90; Surface.ROTATION_180 -> 180; Surface.ROTATION_270 -> 270; else -> 0
     }
 
     private fun loadSpriteTemplates(): List<SpriteTemplate> = runCatching {

@@ -4,6 +4,7 @@ import android.app.*
 import android.content.*
 import android.hardware.display.DisplayManager
 import android.media.projection.MediaProjectionManager
+import android.media.projection.MediaProjectionConfig
 import android.net.Uri
 import android.os.*
 import android.view.*
@@ -35,9 +36,7 @@ class MainActivity : AppCompatActivity() {
     private var boardSpinners: List<Spinner> = emptyList()
     private var captureDetails: TextView? = null
     private val projectionLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
-        if (result.resultCode == RESULT_OK && result.data != null) ContextCompat.startForegroundService(this, Intent(this, CaptureService::class.java).apply {
-            putExtra(CaptureService.EXTRA_RESULT_CODE, result.resultCode); putExtra(CaptureService.EXTRA_RESULT_DATA, result.data)
-        }) else updateStatus("Capture permission cancelled", R.color.muted)
+        handleProjectionResult(result.resultCode, result.data)
     }
     private val exportLauncher = registerForActivityResult(ActivityResultContracts.CreateDocument("image/png")) { uri ->
         if (uri != null) ContextCompat.startForegroundService(this, Intent(this, CaptureService::class.java).apply {
@@ -79,6 +78,12 @@ class MainActivity : AppCompatActivity() {
     override fun onStop() { if (receiverRegistered) { unregisterReceiver(captureReceiver); receiverRegistered = false }; super.onStop() }
     override fun onDestroy() { io.shutdownNow(); super.onDestroy() }
 
+    @Deprecated("Used only for the Android 13 multi-display capture permission flow")
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        if (requestCode == DEFAULT_DISPLAY_CAPTURE_REQUEST) handleProjectionResult(resultCode, data)
+    }
+
     private fun routeToSmallestSecondaryDisplay() {
         val secondary = getSystemService(DisplayManager::class.java).displays.filter { it.displayId != Display.DEFAULT_DISPLAY }.minByOrNull { it.mode.physicalWidth * it.mode.physicalHeight } ?: return
         runCatching { startActivity(Intent(this, MainActivity::class.java).putExtra("routed", true), ActivityOptions.makeBasic().apply { setLaunchDisplayId(secondary.displayId) }.toBundle()) }.onSuccess { finish() }
@@ -112,7 +117,7 @@ class MainActivity : AppCompatActivity() {
         roundLabel = TextView(this).apply { text = roundSummary(); setTextColor(color(R.color.text)); textSize = 14f; setPadding(0, dp(12), 0, dp(8)) }; card.addView(roundLabel)
         val rounds = LinearLayout(this).apply { orientation = LinearLayout.HORIZONTAL }; rounds.addView(button("ROUND WIN", R.color.green) { recordRound(true) }, LinearLayout.LayoutParams(0, dp(42), 1f)); rounds.addView(Space(this), LinearLayout.LayoutParams(dp(8), 1)); rounds.addView(button("ROUND LOSS", R.color.pink) { recordRound(false) }, LinearLayout.LayoutParams(0, dp(42), 1f)); card.addView(rounds)
         val finishes = LinearLayout(this).apply { orientation = LinearLayout.HORIZONTAL; setPadding(0, dp(8), 0, 0) }; finishes.addView(button("FINISH WIN", R.color.gold) { finishRun("Win") }, LinearLayout.LayoutParams(0, dp(42), 1f)); finishes.addView(Space(this), LinearLayout.LayoutParams(dp(8), 1)); finishes.addView(button("FINISH LOSS", R.color.surface_alt) { finishRun("Loss") }, LinearLayout.LayoutParams(0, dp(42), 1f)); card.addView(finishes); content.addView(card)
-        val capture = card(); capture.addView(label("AUTOMATIC CAPTURE", R.color.muted)); capture.addView(body("Keep Batomon on the upper/default display. The Android system prompt appears once per session; raw frames are processed in memory. Recognition is experimental and commits no low-confidence state.")); capture.addView(button("START SCREEN CAPTURE", R.color.cyan) { projectionLauncher.launch(getSystemService(MediaProjectionManager::class.java).createScreenCaptureIntent()) }, LinearLayout.LayoutParams(-1, dp(46))); val stop = button("STOP CAPTURE", R.color.pink) { stopService(Intent(this, CaptureService::class.java)) }; val stopParams = LinearLayout.LayoutParams(-1, dp(40)); stopParams.topMargin = dp(8); capture.addView(stop, stopParams); content.addView(capture)
+        val capture = card(); capture.addView(label("AUTOMATIC CAPTURE", R.color.muted)); capture.addView(body("Keep Batomon on the upper/default display. The Android system prompt appears once per session; raw frames are processed in memory. Recognition is experimental and commits no low-confidence state.")); capture.addView(button("START SCREEN CAPTURE", R.color.cyan) { requestDefaultDisplayCapture() }, LinearLayout.LayoutParams(-1, dp(46))); val stop = button("STOP CAPTURE", R.color.pink) { stopService(Intent(this, CaptureService::class.java)) }; val stopParams = LinearLayout.LayoutParams(-1, dp(40)); stopParams.topMargin = dp(8); capture.addView(stop, stopParams); content.addView(capture)
         val diagnostic = card(); diagnostic.addView(label("RECOGNITION DIAGNOSTICS", R.color.muted)); captureDetails = TextView(this).apply { text = "Candidate: UNKNOWN\nConfidence: —\nFrame: —\nWhy: waiting for capture"; setTextColor(color(R.color.text)); textSize = 13f; setPadding(0, dp(8), 0, dp(4)) }; diagnostic.addView(captureDetails); content.addView(diagnostic)
     }
 
@@ -144,7 +149,33 @@ class MainActivity : AppCompatActivity() {
 
     private fun settingsTab() {
         content.addView(cardWith("THOR DISPLAY", displayDescription())); val diagnostics = card(); diagnostics.addView(label("DIAGNOSTICS", R.color.muted)); diagnostics.addView(body("Saving is never automatic. Choose a destination, then the service saves one explicitly requested frame with system strips redacted and a visible marker.")); diagnostics.addView(button("SAVE REDACTED CURRENT FRAME", R.color.gold) { if (captureActive) exportLauncher.launch("batomon-diagnostic-${System.currentTimeMillis()}.png") else toast("Start screen capture first") }); content.addView(diagnostics)
-        val profile = CalibrationProfile.load(this); val calibration = card(); calibration.addView(label("BOARD ROI CALIBRATION", R.color.muted)); calibration.addView(body("Coordinates are normalized 0–1 fractions of the processed default-display frame. Adjust them after reviewing an explicitly exported diagnostic frame; values are stored locally and no frame is retained.")); val row = LinearLayout(this).apply { orientation = LinearLayout.HORIZONTAL }; val left = field("left", profile.board.left.toString()); val top = field("top", profile.board.top.toString()); val width = field("width", profile.board.width.toString()); val height = field("height", profile.board.height.toString()); listOf(left, top, width, height).forEach { row.addView(it, LinearLayout.LayoutParams(0, dp(52), 1f)) }; calibration.addView(row); calibration.addView(button("SAVE ROI PROFILE", R.color.cyan) { val values = listOf(left, top, width, height).map { it.text.toString().toFloatOrNull()?.coerceIn(0f, 1f) }; if (values.any { it == null }) toast("Enter four numbers from 0 to 1") else { CalibrationProfile(NormalizedRect(values[0]!!, values[1]!!, values[2]!!.coerceAtLeast(.01f), values[3]!!.coerceAtLeast(.01f))).save(this); toast("Calibration saved; restart capture to apply") } }, LinearLayout.LayoutParams(-1, dp(44))); content.addView(calibration); content.addView(cardWith("REFERENCE", "Balance 24 / game build 25600878\nOffline catalogs: Batomon, trinkets, trainers, items\nNo image assets are redistributed.")); content.addView(cardWith("VERSION", "0.4.0 experimental · GPLv3"))
+        val profile = CalibrationProfile.load(this); val calibration = card(); calibration.addView(label("BOARD ROI CALIBRATION", R.color.muted)); calibration.addView(body("Coordinates are normalized 0–1 fractions of the processed default-display frame. Adjust them after reviewing an explicitly exported diagnostic frame; values are stored locally and no frame is retained.")); val row = LinearLayout(this).apply { orientation = LinearLayout.HORIZONTAL }; val left = field("left", profile.board.left.toString()); val top = field("top", profile.board.top.toString()); val width = field("width", profile.board.width.toString()); val height = field("height", profile.board.height.toString()); listOf(left, top, width, height).forEach { row.addView(it, LinearLayout.LayoutParams(0, dp(52), 1f)) }; calibration.addView(row); calibration.addView(button("SAVE ROI PROFILE", R.color.cyan) { val values = listOf(left, top, width, height).map { it.text.toString().toFloatOrNull()?.coerceIn(0f, 1f) }; if (values.any { it == null }) toast("Enter four numbers from 0 to 1") else { CalibrationProfile(NormalizedRect(values[0]!!, values[1]!!, values[2]!!.coerceAtLeast(.01f), values[3]!!.coerceAtLeast(.01f))).save(this); toast("Calibration saved; restart capture to apply") } }, LinearLayout.LayoutParams(-1, dp(44))); content.addView(calibration); content.addView(cardWith("REFERENCE", "Balance 24 / game build 25600878\nOffline catalogs: Batomon, trinkets, trainers, items\nNo image assets are redistributed.")); content.addView(cardWith("VERSION", "${BuildConfig.VERSION_NAME} experimental · GPLv3"))
+    }
+
+    private fun requestDefaultDisplayCapture() {
+        val manager = getSystemService(MediaProjectionManager::class.java)
+        if (Build.VERSION.SDK_INT >= 34) {
+            projectionLauncher.launch(manager.createScreenCaptureIntent(MediaProjectionConfig.createConfigForDefaultDisplay()))
+        } else {
+            // On Android 13 and older, the consent activity's launch display determines which
+            // physical display some multi-display devices mirror. Always launch it on display 0.
+            startActivityForResult(
+                manager.createScreenCaptureIntent(),
+                DEFAULT_DISPLAY_CAPTURE_REQUEST,
+                ActivityOptions.makeBasic().apply { launchDisplayId = Display.DEFAULT_DISPLAY }.toBundle()
+            )
+        }
+    }
+
+    private fun handleProjectionResult(resultCode: Int, data: Intent?) {
+        if (resultCode == RESULT_OK && data != null) {
+            ContextCompat.startForegroundService(this, Intent(this, CaptureService::class.java).apply {
+                putExtra(CaptureService.EXTRA_RESULT_CODE, resultCode)
+                putExtra(CaptureService.EXTRA_RESULT_DATA, data)
+            })
+        } else {
+            updateStatus("Capture permission cancelled", R.color.muted)
+        }
     }
 
     private fun beginRun(mode: String, board: String, notes: String) { io.execute { val start = System.currentTimeMillis(); val normalizedMode = mode.ifBlank { "Unknown" }; val id = database.runs().insertBlocking(RunEntity(startedAt = start, mode = normalizedMode, board = board, notes = notes, source = "manual")); currentRun = RunEntity(id = id, startedAt = start, mode = normalizedMode, board = board, notes = notes, source = "manual"); runOnUiThread { toast("Run started"); roundLabel?.text = roundSummary() } } }
@@ -166,6 +197,8 @@ class MainActivity : AppCompatActivity() {
     private fun toast(s: String) { Toast.makeText(this, s, Toast.LENGTH_SHORT).show() }
     private fun color(id: Int) = ContextCompat.getColor(this, id)
     private fun dp(v: Int) = (v * resources.displayMetrics.density).toInt()
+
+    companion object { private const val DEFAULT_DISPLAY_CAPTURE_REQUEST = 7001 }
 }
 
 private data class ReferenceEntry(val name: String, val description: String, val source: String)

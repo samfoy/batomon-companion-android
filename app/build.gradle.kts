@@ -5,7 +5,7 @@ plugins {
 }
 
 android { namespace = "com.samfoy.batomon"; compileSdk = 36
-    defaultConfig { applicationId = "com.samfoy.batomon"; minSdk = 26; targetSdk = 35; versionCode = 5; versionName = "0.4.1"; testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner" }
+    defaultConfig { applicationId = "com.samfoy.batomon"; minSdk = 26; targetSdk = 35; versionCode = 6; versionName = "0.4.2"; testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner" }
     signingConfigs {
         create("stableRelease") {
             val keystorePath = System.getenv("BATOMON_RELEASE_KEYSTORE")
@@ -20,6 +20,7 @@ android { namespace = "com.samfoy.batomon"; compileSdk = 36
     buildTypes { release { isMinifyEnabled = false; signingConfig = signingConfigs.getByName("stableRelease"); proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro") } }
     compileOptions { sourceCompatibility = JavaVersion.VERSION_17; targetCompatibility = JavaVersion.VERSION_17 }
     kotlinOptions { jvmTarget = "17" }
+    buildFeatures { buildConfig = true }
     packaging { resources.excludes += "/META-INF/{AL2.0,LGPL2.1}" }
 }
 
