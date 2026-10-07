@@ -73,7 +73,7 @@ class MainActivity : AppCompatActivity() {
     override fun onStart() {
         super.onStart()
         val filter = IntentFilter(CaptureService.ACTION_CAPTURE_STATE)
-        if (Build.VERSION.SDK_INT >= 33) registerReceiver(captureReceiver, filter, RECEIVER_NOT_EXPORTED) else registerReceiver(captureReceiver, filter)
+        ContextCompat.registerReceiver(this, captureReceiver, filter, ContextCompat.RECEIVER_NOT_EXPORTED)
         receiverRegistered = true
     }
     override fun onStop() { if (receiverRegistered) { unregisterReceiver(captureReceiver); receiverRegistered = false }; super.onStop() }
