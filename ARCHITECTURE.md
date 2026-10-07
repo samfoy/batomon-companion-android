@@ -9,7 +9,8 @@ MainActivity (lower display UI)
 CaptureService (foreground mediaProjection service)
   ├── VirtualDisplay → RGBA ImageReader
   ├── HandlerThread + acquireLatestImage() + 700 ms throttle
-  └── FrameRecognizer → normalized ROI/template match → temporal state machine (fixture-driven)
+  └── row-stride/rotation/letterbox normalization → experimental scene + board matching
+      → confidence/debounce → state broadcast (raw frames remain ephemeral)
 
 Room
   ├── runs
@@ -22,11 +23,11 @@ At startup, the app chooses the smallest available display whose ID is not `Disp
 
 ## Capture model
 
-Android's user-approved MediaProjection session is passed to `CaptureService`. The service creates a virtual display sized to the default display metrics and attaches it to an RGBA ImageReader. The callback uses `acquireLatestImage`, discarding stale frames, and samples at most once every 700 ms. Every image is closed immediately; no raw frame is persisted or sent over the network. Recognition code should copy only the crop it needs before returning.
+Android's user-approved MediaProjection session is passed to `CaptureService`. The service creates a virtual display sized to the default display metrics and attaches it to an RGBA ImageReader. The callback uses `acquireLatestImage`, discarding stale frames, and samples at most once every 700 ms. Every image is closed immediately; no raw frame is persisted or sent over the network. Recognition code copies a bounded bitmap, normalizes rotation and dark letterbox borders, and downsamples before returning. The bitmap is recycled after the observation broadcast. Raw frames are never persisted unless the user explicitly selects a destination through the diagnostic SAF flow.
 
 ## Recognition contract
 
-`FrameRecognizer` returns a scene and confidence. `SceneRecognizer` selects the highest-confidence recognizer, while `TemporalDebouncer` requires stable repeated results. There are no production recognizers in 0.1.0 because no real Batomon/Thor fixture set is included. This prevents the app from inventing a run from an uncalibrated screenshot.
+`FrameRecognizer` returns a scene and confidence. `ExperimentalSceneRecognizer` combines low-cost arena/result cues with optional six-slot sprite signature matching; `ObservationGate` requires three repeated non-unknown observations at confidence ≥0.80 before a state can be committed. The shipped public sprite signatures are derived summaries, not artwork. The scene cues are inferences from public Steam/how-to-play material, not a validated classifier, and remain intentionally below the commit threshold until real Thor fixtures are collected.
 
 `NormalizedRect` and `ThorRegions` express regions as fractions of the captured display, so a 1920×1080 default display and a letterboxed capture can share recognizer configuration. `PerceptualHash` and `TemplateSceneRecognizer` provide a deterministic, pluggable baseline; templates must come from permission-cleared fixtures and are not bundled in v0.2.
 

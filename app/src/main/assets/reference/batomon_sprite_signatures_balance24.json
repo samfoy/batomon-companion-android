@@ -1,0 +1,1778 @@
+{
+  "schema": 1,
+  "reference": "Derived Batomon sprite signatures",
+  "balance": "24",
+  "gameBuild": "1.2.0 / 25600878",
+  "source": "https://batomon.com/batomon",
+  "signatureMethod": "8x8 average-luminance hash + 16x16 average RGB + edge density; source PNG bytes are not retained",
+  "entries": [
+    {
+      "id": "bambudo",
+      "name": "Bambudo",
+      "spritePath": "/game/25600878/monster/bambudo.png",
+      "hash64": "003c3c3c7c3c1800",
+      "averageRgb": [
+        52,
+        61,
+        40
+      ],
+      "edgeDensity": 0.3479,
+      "sourceSha256": "f2e630e95e2c62b46bf4bbad470a1ced520f5dbef46bc4b97b1b7c304d116112"
+    },
+    {
+      "id": "beetbud",
+      "name": "Beetbud",
+      "spritePath": "/game/25600878/monster/beetbud.png",
+      "hash64": "0038381c1e3c1800",
+      "averageRgb": [
+        36,
+        33,
+        25
+      ],
+      "edgeDensity": 0.2271,
+      "sourceSha256": "df44f0b7de57650036b4b7459b9100a925b34df7cf70ee1ca2441d932db08ee1"
+    },
+    {
+      "id": "beetdown",
+      "name": "Beetdown",
+      "spritePath": "/game/25600878/monster/beetdown.png",
+      "hash64": "00387c3c3e3e7e20",
+      "averageRgb": [
+        60,
+        59,
+        43
+      ],
+      "edgeDensity": 0.3417,
+      "sourceSha256": "7e9d8dfb09a0080c0c691d0d8980de38105f166cbee37b8035d1e97e483c5ab2"
+    },
+    {
+      "id": "bunchop",
+      "name": "Bunchop",
+      "spritePath": "/game/25600878/monster/bunchop.png",
+      "hash64": "383c3c383c1c0000",
+      "averageRgb": [
+        35,
+        30,
+        27
+      ],
+      "edgeDensity": 0.2396,
+      "sourceSha256": "9493e6c351b985e25b33a357f02e8d2cb1976e6c9187df594a8c95418309a52f"
+    },
+    {
+      "id": "dewlotl",
+      "name": "Dewlotl",
+      "spritePath": "/game/25600878/monster/dewlotl.png",
+      "hash64": "0c1e1e3c7c7c4400",
+      "averageRgb": [
+        65,
+        56,
+        63
+      ],
+      "edgeDensity": 0.3333,
+      "sourceSha256": "405977be0b6b79e4e93574bf9d32241c6771b1df1be87edb7f423989606228ae"
+    },
+    {
+      "id": "dribblet",
+      "name": "Dribblet",
+      "spritePath": "/game/25600878/monster/dribblet.png",
+      "hash64": "183c3c1c08000000",
+      "averageRgb": [
+        16,
+        20,
+        24
+      ],
+      "edgeDensity": 0.1229,
+      "sourceSha256": "17c8f45dd65c2e0697c69da5bbf6957d8af3fdba41c20a509f8513e7ee34a52f"
+    },
+    {
+      "id": "emperooze",
+      "name": "Emperooze",
+      "spritePath": "/game/25600878/monster/emperooze.png",
+      "hash64": "3c7e7e3e3c300000",
+      "averageRgb": [
+        48,
+        62,
+        66
+      ],
+      "edgeDensity": 0.2458,
+      "sourceSha256": "3fdcf6d2c35b839a336d827a5c0af8b9e4858fec16d29247a65849bbb75b168a"
+    },
+    {
+      "id": "frillet",
+      "name": "Frillet",
+      "spritePath": "/game/25600878/monster/frillet.png",
+      "hash64": "3c3c7c7c28000000",
+      "averageRgb": [
+        43,
+        32,
+        35
+      ],
+      "edgeDensity": 0.2354,
+      "sourceSha256": "2c57edb441fbc91d4eb11a811422bda616e491db3cd3d5f5796d4da0eb16e737"
+    },
+    {
+      "id": "furnadon",
+      "name": "Furnadon",
+      "spritePath": "/game/25600878/monster/furnadon.png",
+      "hash64": "083c3c3c7e3c3e38",
+      "averageRgb": [
+        79,
+        58,
+        44
+      ],
+      "edgeDensity": 0.3396,
+      "sourceSha256": "c6b41a5437d25a1baf1e67bd321883bab34551aed961fb7087530a5b4a1c293f"
+    },
+    {
+      "id": "guardiant",
+      "name": "Guardiant",
+      "spritePath": "/game/25600878/monster/guardiant.png",
+      "hash64": "18183c3c1c380000",
+      "averageRgb": [
+        25,
+        24,
+        29
+      ],
+      "edgeDensity": 0.2062,
+      "sourceSha256": "b4157489206750e96cca053862e9397f8534657caef938680ea0a72ca2041c74"
+    },
+    {
+      "id": "kindlepot",
+      "name": "Kindlepot",
+      "spritePath": "/game/25600878/monster/kindlepot.png",
+      "hash64": "387c7c3c381c0c00",
+      "averageRgb": [
+        53,
+        39,
+        31
+      ],
+      "edgeDensity": 0.2604,
+      "sourceSha256": "e161be014d694ff0a3710248503f229333c4ffdb8c2e9f6c74e092359a4f1c7b"
+    },
+    {
+      "id": "leafleap",
+      "name": "Leafleap",
+      "spritePath": "/game/25600878/monster/leafleap.png",
+      "hash64": "383c3c1c0c000000",
+      "averageRgb": [
+        19,
+        24,
+        11
+      ],
+      "edgeDensity": 0.1646,
+      "sourceSha256": "cc4c5e341306a08c7a629c34db5922780da36e40cca5efa90c534947788bd064"
+    },
+    {
+      "id": "mosslug",
+      "name": "Mosslug",
+      "spritePath": "/game/25600878/monster/mosslug.png",
+      "hash64": "3e7e7c7800000000",
+      "averageRgb": [
+        25,
+        34,
+        27
+      ],
+      "edgeDensity": 0.1958,
+      "sourceSha256": "e2a62cd8f94d6aa6d46ae563121a49a16bcd12c32ef0484ea08faee09c056f4e"
+    },
+    {
+      "id": "panbud",
+      "name": "Panbud",
+      "spritePath": "/game/25600878/monster/panbud.png",
+      "hash64": "183c3c3c3c180000",
+      "averageRgb": [
+        39,
+        46,
+        27
+      ],
+      "edgeDensity": 0.2479,
+      "sourceSha256": "c8e4aa302e02245c67bd690a397ba9f66117ae2e7e2df48c4e4f6078421598b8"
+    },
+    {
+      "id": "pebbler",
+      "name": "Pebbler",
+      "spritePath": "/game/25600878/monster/pebbler.png",
+      "hash64": "3c3c3c1c0c000000",
+      "averageRgb": [
+        29,
+        19,
+        7
+      ],
+      "edgeDensity": 0.1562,
+      "sourceSha256": "bcfd06a44786eb86fa79c94a453803ba51ba6abb1cbf7a7812eb034b9412d399"
+    },
+    {
+      "id": "pipskull",
+      "name": "Pipskull",
+      "spritePath": "/game/25600878/monster/pipskull.png",
+      "hash64": "181c3c3c3c200000",
+      "averageRgb": [
+        22,
+        21,
+        20
+      ],
+      "edgeDensity": 0.1833,
+      "sourceSha256": "d6244c3dec7cf3a1f50c8c836eaf5beb0a48ee21fece125b9b18d7d6713c0d0e"
+    },
+    {
+      "id": "ratacomb",
+      "name": "Ratacomb",
+      "spritePath": "/game/25600878/monster/ratacomb.png",
+      "hash64": "107c7e7e02000000",
+      "averageRgb": [
+        19,
+        17,
+        17
+      ],
+      "edgeDensity": 0.1792,
+      "sourceSha256": "8c38efcfaa333846740889dc74c876bcdefb9358fdb6ab654b5e4315af44d889"
+    },
+    {
+      "id": "rattleghast",
+      "name": "Rattleghast",
+      "spritePath": "/game/25600878/monster/rattleghast.png",
+      "hash64": "387c7c3078381800",
+      "averageRgb": [
+        34,
+        33,
+        49
+      ],
+      "edgeDensity": 0.2625,
+      "sourceSha256": "3906645c50e8214196cf5bc985fc408eee58ef5cb89b58f5fc485e37351aff2c"
+    },
+    {
+      "id": "rubbin",
+      "name": "Rubbin",
+      "spritePath": "/game/25600878/monster/rubbin.png",
+      "hash64": "383c3c3c3c1c0000",
+      "averageRgb": [
+        43,
+        41,
+        41
+      ],
+      "edgeDensity": 0.2042,
+      "sourceSha256": "28c339d1deb5466205c399a5b1ed8a11fbc72cbadb6dc65d5ac9bfeff4717e30"
+    },
+    {
+      "id": "scorchimp",
+      "name": "Scorchimp",
+      "spritePath": "/game/25600878/monster/scorchimp.png",
+      "hash64": "183c3c3810000000",
+      "averageRgb": [
+        24,
+        16,
+        11
+      ],
+      "edgeDensity": 0.15,
+      "sourceSha256": "04ef7ef0f61a4a9dc4a130d92ba6d1aa098303caabdb69fbb75371b500d3b6cf"
+    },
+    {
+      "id": "shellter",
+      "name": "Shellter",
+      "spritePath": "/game/25600878/monster/shellter.png",
+      "hash64": "383c3c3c00000000",
+      "averageRgb": [
+        28,
+        27,
+        23
+      ],
+      "edgeDensity": 0.1458,
+      "sourceSha256": "4f471bd67b7ae15ab8fde6bb5e1723abc2f344232a90c1fd33446dd38b6f9bdc"
+    },
+    {
+      "id": "stingarde",
+      "name": "Stingarde",
+      "spritePath": "/game/25600878/monster/stingarde.png",
+      "hash64": "10383c3c1e160000",
+      "averageRgb": [
+        32,
+        29,
+        24
+      ],
+      "edgeDensity": 0.2437,
+      "sourceSha256": "596f6c1b36933f6d10763bd6dfc81bb210b8ddc16cd11c5c29d19b5dbb8d3369"
+    },
+    {
+      "id": "sunsage",
+      "name": "Sunsage",
+      "spritePath": "/game/25600878/monster/sunsage.png",
+      "hash64": "007c7c7878300000",
+      "averageRgb": [
+        44,
+        23,
+        22
+      ],
+      "edgeDensity": 0.2646,
+      "sourceSha256": "ad95465bfa953864b38ac379a27ce7823dfe5e1742542bb5dd5bc5abc7d4430a"
+    },
+    {
+      "id": "swoonet",
+      "name": "Swoonet",
+      "spritePath": "/game/25600878/monster/swoonet.png",
+      "hash64": "383c3e3c30100000",
+      "averageRgb": [
+        36,
+        45,
+        48
+      ],
+      "edgeDensity": 0.2542,
+      "sourceSha256": "bc66471ab4735c6f2255a09bbcceb90c406f56f79c96718f010ed6c2f98e2dd1"
+    },
+    {
+      "id": "toximoth",
+      "name": "Toximoth",
+      "spritePath": "/game/25600878/monster/toximoth.png",
+      "hash64": "00387c7e3e300000",
+      "averageRgb": [
+        52,
+        49,
+        56
+      ],
+      "edgeDensity": 0.3083,
+      "sourceSha256": "87c5ccabb786c460789e964f93182444acf85207753e13f6915f22c44d275843"
+    },
+    {
+      "id": "aviarab",
+      "name": "Aviarab",
+      "spritePath": "/game/25600878/monster/aviarab.png",
+      "hash64": "003e7e7c46000000",
+      "averageRgb": [
+        37,
+        24,
+        23
+      ],
+      "edgeDensity": 0.2396,
+      "sourceSha256": "cf400dd2cd6cf4664fb2a75132cad6c31f21e2553add5115c4812ae9d670e400"
+    },
+    {
+      "id": "berroon",
+      "name": "Berroon",
+      "spritePath": "/game/25600878/monster/berroon.png",
+      "hash64": "00383c7e3e1c0000",
+      "averageRgb": [
+        46,
+        34,
+        20
+      ],
+      "edgeDensity": 0.2375,
+      "sourceSha256": "c01f7175e0e5fc357494287e9dae0518bc1060150fa8c10c96db48066ae6c478"
+    },
+    {
+      "id": "blessom",
+      "name": "Blessom",
+      "spritePath": "/game/25600878/monster/blessom.png",
+      "hash64": "183c383c3c381800",
+      "averageRgb": [
+        28,
+        28,
+        29
+      ],
+      "edgeDensity": 0.2333,
+      "sourceSha256": "89fa44bf1e874825478e1fab5ff789c47cd4d238709f37e06fbc67e6ffaf0df2"
+    },
+    {
+      "id": "bonshell",
+      "name": "Bonshell",
+      "spritePath": "/game/25600878/monster/bonshell.png",
+      "hash64": "003e7c1c1c7c3800",
+      "averageRgb": [
+        41,
+        44,
+        22
+      ],
+      "edgeDensity": 0.3125,
+      "sourceSha256": "5bdb148e92b43f3bc4b58d061ea619b689cfde32e5e0262e3dd187cccd371224"
+    },
+    {
+      "id": "boomagon",
+      "name": "Boomagon",
+      "spritePath": "/game/25600878/monster/boomagon.png",
+      "hash64": "183c3e383c1c1000",
+      "averageRgb": [
+        59,
+        46,
+        44
+      ],
+      "edgeDensity": 0.2854,
+      "sourceSha256": "1a84000937b437253306239ff749af488b18a7d4bb8a59336f44e8fe7a3bc9a6"
+    },
+    {
+      "id": "brawlmantis",
+      "name": "Brawlmantis",
+      "spritePath": "/game/25600878/monster/brawlmantis.png",
+      "hash64": "283c3e7c3c380000",
+      "averageRgb": [
+        43,
+        35,
+        17
+      ],
+      "edgeDensity": 0.3,
+      "sourceSha256": "842dc06ca0c381d09daf050bf1724ecb8754b653913516c883f4441eb1dedc86"
+    },
+    {
+      "id": "brimtoad",
+      "name": "Brimtoad",
+      "spritePath": "/game/25600878/monster/brimtoad.png",
+      "hash64": "3c3e3e3830000000",
+      "averageRgb": [
+        22,
+        9,
+        14
+      ],
+      "edgeDensity": 0.1437,
+      "sourceSha256": "42c3d03207ce65ab156fa43230e619ec96121925ca61b2d8f3336832639792f6"
+    },
+    {
+      "id": "cinderfly",
+      "name": "Cinderfly",
+      "spritePath": "/game/25600878/monster/cinderfly.png",
+      "hash64": "00183c7c7e6e0000",
+      "averageRgb": [
+        50,
+        40,
+        22
+      ],
+      "edgeDensity": 0.2833,
+      "sourceSha256": "c7519733914cb7d3632f7275ec42bb91723de998e71f83457033611ed2bcda31"
+    },
+    {
+      "id": "cinnabark",
+      "name": "Cinnabark",
+      "spritePath": "/game/25600878/monster/cinnabark.png",
+      "hash64": "383c3c7c3c3c0000",
+      "averageRgb": [
+        55,
+        45,
+        68
+      ],
+      "edgeDensity": 0.2625,
+      "sourceSha256": "4944d9b14ce5778248d14528fda2fa86f2f4d3294e49fdaaf75a9e4831f9a0b5"
+    },
+    {
+      "id": "alpinine",
+      "name": "Craghorn",
+      "spritePath": "/game/25600878/monster/alpinine.png",
+      "hash64": "143c3c7c7e783000",
+      "averageRgb": [
+        47,
+        45,
+        39
+      ],
+      "edgeDensity": 0.3208,
+      "sourceSha256": "65518c5c070cd1217935918da2fabcbcf7c0995bc9d65779487e23bad0a36d13"
+    },
+    {
+      "id": "galvanade",
+      "name": "Electranade",
+      "spritePath": "/game/25600878/monster/galvanade.png",
+      "hash64": "183c7c3c180e0000",
+      "averageRgb": [
+        47,
+        40,
+        15
+      ],
+      "edgeDensity": 0.2521,
+      "sourceSha256": "3c5eb53c5a3d7243809f371479a6fa1218dbeef460b7c066537e1ee8f1690776"
+    },
+    {
+      "id": "emburn",
+      "name": "Emburn",
+      "spritePath": "/game/25600878/monster/emburn.png",
+      "hash64": "00387c3c38380800",
+      "averageRgb": [
+        24,
+        26,
+        33
+      ],
+      "edgeDensity": 0.2167,
+      "sourceSha256": "bca1bbec1fef939ac93168fb805b2e7875079d59564c606be204500ebec363d6"
+    },
+    {
+      "id": "frizzly",
+      "name": "Frizzly",
+      "spritePath": "/game/25600878/monster/frizzly.png",
+      "hash64": "003c3c7e3c3c1000",
+      "averageRgb": [
+        78,
+        73,
+        52
+      ],
+      "edgeDensity": 0.2938,
+      "sourceSha256": "949873e5becdbc359841269009e8363931a0e1f3a9f2df8c88107bca6b283f4f"
+    },
+    {
+      "id": "gildshell",
+      "name": "Gildshell",
+      "spritePath": "/game/25600878/monster/gildshell.png",
+      "hash64": "3c3c3c3c20000000",
+      "averageRgb": [
+        30,
+        23,
+        18
+      ],
+      "edgeDensity": 0.1812,
+      "sourceSha256": "8586305c02ad8c68e00c6ae884be5a78594461e1a94203878984ab9faa7b0ec8"
+    },
+    {
+      "id": "kappow",
+      "name": "Kappow",
+      "spritePath": "/game/25600878/monster/kappow.png",
+      "hash64": "043c3c7c3c381000",
+      "averageRgb": [
+        28,
+        32,
+        37
+      ],
+      "edgeDensity": 0.2938,
+      "sourceSha256": "5876b2f8918fcbd25e934e84f78c63520d0065148c359664896408b8c522da5f"
+    },
+    {
+      "id": "nekoffin",
+      "name": "Nekoffin",
+      "spritePath": "/game/25600878/monster/nekoffin.png",
+      "hash64": "1838383c7c380000",
+      "averageRgb": [
+        32,
+        28,
+        29
+      ],
+      "edgeDensity": 0.1958,
+      "sourceSha256": "91254f6dcf60e138d872d293facda79a1f70e0e8a3cadc8164586bde39e30d84"
+    },
+    {
+      "id": "noxnimbus",
+      "name": "Noxnimbus",
+      "spritePath": "/game/25600878/monster/noxnimbus.png",
+      "hash64": "00107c7e7e3e1c00",
+      "averageRgb": [
+        58,
+        43,
+        60
+      ],
+      "edgeDensity": 0.3021,
+      "sourceSha256": "aa876c651874b07ef2bb21977660cd3083aa29387c2279b47f21f5c3e23c98ad"
+    },
+    {
+      "id": "pawsperity",
+      "name": "Pawsperity",
+      "spritePath": "/game/25600878/monster/pawsperity.png",
+      "hash64": "287c7c7c78380000",
+      "averageRgb": [
+        81,
+        72,
+        57
+      ],
+      "edgeDensity": 0.3979,
+      "sourceSha256": "34942e37c3926be49f9e8ebe55ae172f54656e25707800649eedc340dcb68a9c"
+    },
+    {
+      "id": "plunderbird",
+      "name": "Plunderbird",
+      "spritePath": "/game/25600878/monster/plunderbird.png",
+      "hash64": "003c3c787c300000",
+      "averageRgb": [
+        25,
+        33,
+        34
+      ],
+      "edgeDensity": 0.2375,
+      "sourceSha256": "1415cce5e84ce799f286d2d0d995d95e4aef308cfb73bff554ca5c88643690f6"
+    },
+    {
+      "id": "puffloon",
+      "name": "Puffloon",
+      "spritePath": "/game/25600878/monster/puffloon.png",
+      "hash64": "387e7c7c38000000",
+      "averageRgb": [
+        57,
+        45,
+        46
+      ],
+      "edgeDensity": 0.2562,
+      "sourceSha256": "6916ae6b9f7c17d23eed3bea23f1c390ad9fad0982986b3a251801adc8b6c618"
+    },
+    {
+      "id": "infernade",
+      "name": "Pyronade",
+      "spritePath": "/game/25600878/monster/infernade.png",
+      "hash64": "183c7c3c1c0e0400",
+      "averageRgb": [
+        44,
+        21,
+        13
+      ],
+      "edgeDensity": 0.2167,
+      "sourceSha256": "2464688f89e6493ce022b82df3122426e74166569ce31b5dbbd34c3e0d9c0bb1"
+    },
+    {
+      "id": "runerock",
+      "name": "Runerock",
+      "spritePath": "/game/25600878/monster/runerock.png",
+      "hash64": "107e7c183c180000",
+      "averageRgb": [
+        26,
+        22,
+        29
+      ],
+      "edgeDensity": 0.2271,
+      "sourceSha256": "5fb83ad8b472321216f339688be058e05ed0384925eb0c35dc2813ab5413c8a2"
+    },
+    {
+      "id": "shogapede",
+      "name": "Shogapede",
+      "spritePath": "/game/25600878/monster/shogapede.png",
+      "hash64": "387c6e3e3e3c0800",
+      "averageRgb": [
+        43,
+        22,
+        31
+      ],
+      "edgeDensity": 0.2417,
+      "sourceSha256": "fce7bd6b3756845eabd81bf84bf14be51faa6112f0171dae5508fe6f538904ed"
+    },
+    {
+      "id": "sukoi",
+      "name": "Sukoi",
+      "spritePath": "/game/25600878/monster/sukoi.png",
+      "hash64": "00787e7c3c000000",
+      "averageRgb": [
+        42,
+        23,
+        21
+      ],
+      "edgeDensity": 0.2604,
+      "sourceSha256": "6da4a831f66ba6706c9c67f166be4f2432bb3a5afab354d38d4ed55f5d235316"
+    },
+    {
+      "id": "aster",
+      "name": "Aster",
+      "spritePath": "/game/25600878/monster/aster.png",
+      "hash64": "043c3c387c3c1800",
+      "averageRgb": [
+        45,
+        59,
+        51
+      ],
+      "edgeDensity": 0.3,
+      "sourceSha256": "55497b8fd942d9f4b3dece1913b044034db20397ad6d86dc09e4b03a3aac56f3"
+    },
+    {
+      "id": "cherubble",
+      "name": "Cherubble",
+      "spritePath": "/game/25600878/monster/cherubble.png",
+      "hash64": "18383c3e7e3e0000",
+      "averageRgb": [
+        42,
+        44,
+        48
+      ],
+      "edgeDensity": 0.2854,
+      "sourceSha256": "e14a5236bf927347df66c32d698962997d8b047fe0b0b297ca727839dd740052"
+    },
+    {
+      "id": "cicadence",
+      "name": "Cicadence",
+      "spritePath": "/game/25600878/monster/cicadence.png",
+      "hash64": "08383c7c7e000000",
+      "averageRgb": [
+        24,
+        25,
+        33
+      ],
+      "edgeDensity": 0.1938,
+      "sourceSha256": "4bb7ec5c33b24679f34503d1c5816f906b9fd5f209948937aea1f4fa925fe0b0"
+    },
+    {
+      "id": "cordycant",
+      "name": "Cordycant",
+      "spritePath": "/game/25600878/monster/cordycant.png",
+      "hash64": "303c3c183c3c1800",
+      "averageRgb": [
+        44,
+        18,
+        23
+      ],
+      "edgeDensity": 0.225,
+      "sourceSha256": "59070a15338800fa0b6f17fdb6fabfe4a4c497db0932a6f8340c69da305aa6aa"
+    },
+    {
+      "id": "dirgefin",
+      "name": "Dirgefin",
+      "spritePath": "/game/25600878/monster/dirgefin.png",
+      "hash64": "307e7c3c0e020000",
+      "averageRgb": [
+        40,
+        39,
+        40
+      ],
+      "edgeDensity": 0.2917,
+      "sourceSha256": "355047e9281d3464fa2cb1744c4fffc9f6ad77c189acdf05bcb52e908cebd36b"
+    },
+    {
+      "id": "dollhime",
+      "name": "Dollhime",
+      "spritePath": "/game/25600878/monster/dollhime.png",
+      "hash64": "3c7c3c3c1c3c3c00",
+      "averageRgb": [
+        53,
+        35,
+        53
+      ],
+      "edgeDensity": 0.2958,
+      "sourceSha256": "4776fbd2d7c8c32a16edfaed655893a173eebecb13eab93ed4856fb0c314d733"
+    },
+    {
+      "id": "dracana",
+      "name": "Dracana",
+      "spritePath": "/game/25600878/monster/dracana.png",
+      "hash64": "3c3e7e7838381000",
+      "averageRgb": [
+        46,
+        53,
+        60
+      ],
+      "edgeDensity": 0.2958,
+      "sourceSha256": "e09bfbd1c044080e2e842291b16c6f52c3b375b2536d52c45704413b4225cbe7"
+    },
+    {
+      "id": "formiqueen",
+      "name": "Formiqueen",
+      "spritePath": "/game/25600878/monster/formiqueen.png",
+      "hash64": "263e3c185e181800",
+      "averageRgb": [
+        22,
+        29,
+        39
+      ],
+      "edgeDensity": 0.2771,
+      "sourceSha256": "4cf2d64333f3eb48dbe59147869d83b01ef673160c2abbb77815f370fb7a817c"
+    },
+    {
+      "id": "ignit",
+      "name": "Ignit",
+      "spritePath": "/game/25600878/monster/ignit.png",
+      "hash64": "1c3e3e7e38000000",
+      "averageRgb": [
+        20,
+        28,
+        27
+      ],
+      "edgeDensity": 0.2188,
+      "sourceSha256": "e029b68411cb19004ba2efdfb2b695cd41b78f874b51b94ed9180a339cbdacce"
+    },
+    {
+      "id": "ironcore",
+      "name": "Ironcore",
+      "spritePath": "/game/25600878/monster/ironcore.png",
+      "hash64": "3c7e3c3c3c180000",
+      "averageRgb": [
+        44,
+        41,
+        37
+      ],
+      "edgeDensity": 0.2771,
+      "sourceSha256": "3749088c4cd35934ec31ff7ed1ecfc4636fe0d4f8eca0e7e09ab749813ad1eb7"
+    },
+    {
+      "id": "kickrane",
+      "name": "Kickrane",
+      "spritePath": "/game/25600878/monster/kickrane.png",
+      "hash64": "0800081e3e1c0800",
+      "averageRgb": [
+        26,
+        22,
+        21
+      ],
+      "edgeDensity": 0.2625,
+      "sourceSha256": "94814a40eabfac48f35dec7ca7f28320d6353eaa34944995c9c2bec65d4cd05a"
+    },
+    {
+      "id": "lignite",
+      "name": "Lignite",
+      "spritePath": "/game/25600878/monster/lignite.png",
+      "hash64": "00247c78f8706000",
+      "averageRgb": [
+        74,
+        54,
+        45
+      ],
+      "edgeDensity": 0.3771,
+      "sourceSha256": "71136974605a34abbb7b45c904a2e5f6f3850830c182633f6525b47a800ee1a9"
+    },
+    {
+      "id": "lumijel",
+      "name": "Lumijel",
+      "spritePath": "/game/25600878/monster/lumijel.png",
+      "hash64": "007c7c7c3c3c1800",
+      "averageRgb": [
+        23,
+        48,
+        57
+      ],
+      "edgeDensity": 0.3458,
+      "sourceSha256": "ac1099db4d541f2f10f5ec2b7ba69dfe378753aed97d364f9b07526be02c59a6"
+    },
+    {
+      "id": "magmalith",
+      "name": "Magmalith",
+      "spritePath": "/game/25600878/monster/magmalith.png",
+      "hash64": "1818183e7e381800",
+      "averageRgb": [
+        32,
+        24,
+        20
+      ],
+      "edgeDensity": 0.2125,
+      "sourceSha256": "b535d969cb7c60c311c25e29473b3f34825faeb1e5a4593f6df461f341547c4f"
+    },
+    {
+      "id": "noxalith",
+      "name": "Noxalith",
+      "spritePath": "/game/25600878/monster/noxalith.png",
+      "hash64": "181818181c3e1c00",
+      "averageRgb": [
+        41,
+        26,
+        23
+      ],
+      "edgeDensity": 0.2083,
+      "sourceSha256": "1b778960298fbb1a5f0ac179cc0b5ffaca324ed14064fd82a9f4e2b4c6d10c88"
+    },
+    {
+      "id": "petrirex",
+      "name": "Petrirex",
+      "spritePath": "/game/25600878/monster/petrirex.png",
+      "hash64": "083c3e7a78700000",
+      "averageRgb": [
+        30,
+        28,
+        26
+      ],
+      "edgeDensity": 0.2375,
+      "sourceSha256": "1b73de9531ff03de2c6f2573660c14a88adedf4bee47d2408e527d77b46e1570"
+    },
+    {
+      "id": "pyrokami",
+      "name": "Pyrokami",
+      "spritePath": "/game/25600878/monster/pyrokami.png",
+      "hash64": "101a3e7e7f3f0200",
+      "averageRgb": [
+        54,
+        42,
+        33
+      ],
+      "edgeDensity": 0.3917,
+      "sourceSha256": "0ebec08b21918afb59464f8b18f22c1e3464fb3e7a017c6174667ed4658e8d42"
+    },
+    {
+      "id": "rhizuka",
+      "name": "Rhizuka",
+      "spritePath": "/game/25600878/monster/rhizuka.png",
+      "hash64": "107e7e7c38380000",
+      "averageRgb": [
+        44,
+        45,
+        48
+      ],
+      "edgeDensity": 0.3104,
+      "sourceSha256": "4a6b5bd4ecf53ea7f91d18aa88fcd832b274d94ec8f19a0fb7f5e2bf031b1570"
+    },
+    {
+      "id": "sarudo",
+      "name": "Sarudo",
+      "spritePath": "/game/25600878/monster/sarudo.png",
+      "hash64": "00347cfc7c181800",
+      "averageRgb": [
+        57,
+        50,
+        50
+      ],
+      "edgeDensity": 0.3896,
+      "sourceSha256": "2c73f652d42abf039535e1009909dd5412d470aba5e655bab47db2a422d34943"
+    },
+    {
+      "id": "shikitsune",
+      "name": "Shikitsune",
+      "spritePath": "/game/25600878/monster/shikitsune.png",
+      "hash64": "183e3e7e7c380000",
+      "averageRgb": [
+        65,
+        63,
+        65
+      ],
+      "edgeDensity": 0.3187,
+      "sourceSha256": "11af1112cb6a9beab34fef6b029041f5831bda50f0a9929fc6a171a7362de296"
+    },
+    {
+      "id": "sproach",
+      "name": "Sproach",
+      "spritePath": "/game/25600878/monster/sproach.png",
+      "hash64": "001e3c3c78786800",
+      "averageRgb": [
+        33,
+        41,
+        28
+      ],
+      "edgeDensity": 0.3167,
+      "sourceSha256": "7a151e5b4a007fefcf1925e237fd3c5ff6e23e254c4a57d8e5351451bd41ba8e"
+    },
+    {
+      "id": "stalagrove",
+      "name": "Stalagrove",
+      "spritePath": "/game/25600878/monster/stalagrove.png",
+      "hash64": "3c3efe7e3c180000",
+      "averageRgb": [
+        33,
+        31,
+        27
+      ],
+      "edgeDensity": 0.25,
+      "sourceSha256": "794d83c0691e6521506d230a4bcbfdbffe61fef5425b6fc0441577d2376cad00"
+    },
+    {
+      "id": "steamscuttle",
+      "name": "Steamscuttle",
+      "spritePath": "/game/25600878/monster/steamscuttle.png",
+      "hash64": "007c7f5b181c0800",
+      "averageRgb": [
+        51,
+        53,
+        53
+      ],
+      "edgeDensity": 0.3875,
+      "sourceSha256": "ec1e934034c7e394c28a5243d8181ba3c9d9d54446e06fb788b4279ef74646fb"
+    },
+    {
+      "id": "talonite",
+      "name": "Talonite",
+      "spritePath": "/game/25600878/monster/talonite.png",
+      "hash64": "00387e7e38180000",
+      "averageRgb": [
+        28,
+        20,
+        15
+      ],
+      "edgeDensity": 0.2417,
+      "sourceSha256": "9023b241ff929984044b64aa01205e0b267d60e7a5bff0c82b86cc981bd7c9dd"
+    },
+    {
+      "id": "thorntail",
+      "name": "Thorntail",
+      "spritePath": "/game/25600878/monster/thorntail.png",
+      "hash64": "3838387c76360000",
+      "averageRgb": [
+        32,
+        25,
+        34
+      ],
+      "edgeDensity": 0.2354,
+      "sourceSha256": "bad400f1eb09f7d3cd307abeeed129945373acad9b5c17429f080ae05e643663"
+    },
+    {
+      "id": "vipair",
+      "name": "Vipair",
+      "spritePath": "/game/25600878/monster/vipair.png",
+      "hash64": "183c7e7c783c0c00",
+      "averageRgb": [
+        66,
+        53,
+        33
+      ],
+      "edgeDensity": 0.3146,
+      "sourceSha256": "2c7943d3cfd6b2cbc63f96fd01602ed03315f25dda8b1c99c53919a043db071c"
+    },
+    {
+      "id": "voltalith",
+      "name": "Voltalith",
+      "spritePath": "/game/25600878/monster/voltalith.png",
+      "hash64": "1818183c3c1c0c00",
+      "averageRgb": [
+        28,
+        27,
+        21
+      ],
+      "edgeDensity": 0.225,
+      "sourceSha256": "6688cc263b22b303bd5eaef97d9f02eb74e5cac94cd72f51ce7f50a5ca73f88d"
+    },
+    {
+      "id": "aegistruct",
+      "name": "Aegistruct",
+      "spritePath": "/game/25600878/monster/aegistruct.png",
+      "hash64": "001c3c7e7e7c3c00",
+      "averageRgb": [
+        57,
+        34,
+        21
+      ],
+      "edgeDensity": 0.2229,
+      "sourceSha256": "b1c7dc965812a3ab6a68692de5f7c33bacb322a48b6c486a546aac7a068af1dc"
+    },
+    {
+      "id": "cawnushi",
+      "name": "Cawnushi",
+      "spritePath": "/game/25600878/monster/cawnushi.png",
+      "hash64": "003c3c38383c3810",
+      "averageRgb": [
+        28,
+        24,
+        27
+      ],
+      "edgeDensity": 0.1854,
+      "sourceSha256": "1213486baf7022189d99641b5b2ad80ed63255e4a3a7a0174c707c8fb4826021"
+    },
+    {
+      "id": "celestia",
+      "name": "Celestia",
+      "spritePath": "/game/25600878/monster/celestia.png",
+      "hash64": "0038b8fb7e7e3000",
+      "averageRgb": [
+        46,
+        45,
+        62
+      ],
+      "edgeDensity": 0.4292,
+      "sourceSha256": "137f88e781ec2424dc9b0584c252f8426aaea5f2ea5e555f87b5ffa6d5083ae7"
+    },
+    {
+      "id": "clawnetic",
+      "name": "Clawnetic",
+      "spritePath": "/game/25600878/monster/clawnetic.png",
+      "hash64": "1c3c7e7e40000000",
+      "averageRgb": [
+        42,
+        29,
+        15
+      ],
+      "edgeDensity": 0.2458,
+      "sourceSha256": "9d021c2652284139ab3008e362efb98bd0472225271a10ddeae65626a7a07888"
+    },
+    {
+      "id": "coalem",
+      "name": "Coalem",
+      "spritePath": "/game/25600878/monster/coalem.png",
+      "hash64": "40667e7a7e3c1000",
+      "averageRgb": [
+        42,
+        33,
+        32
+      ],
+      "edgeDensity": 0.3,
+      "sourceSha256": "f87b870b4dba2e1a31be556dc97c4b863f57e3738de5cc7ae0ff6243fd1a1ce8"
+    },
+    {
+      "id": "danuki",
+      "name": "Danuki",
+      "spritePath": "/game/25600878/monster/danuki.png",
+      "hash64": "003c3e3838380000",
+      "averageRgb": [
+        26,
+        28,
+        37
+      ],
+      "edgeDensity": 0.2104,
+      "sourceSha256": "a5b054796fb3e064415eb41249b5b58abd5b466892230ebbe0ec59a5f7e74b9a"
+    },
+    {
+      "id": "dragon_egg_0",
+      "name": "Dragon Egg",
+      "spritePath": "/game/25600878/monster/dragon_egg_0.png",
+      "hash64": "003c3c3c18000000",
+      "averageRgb": [
+        23,
+        27,
+        20
+      ],
+      "edgeDensity": 0.1646,
+      "sourceSha256": "a8cea024c1f522c5528c5f3eedbb32d87d1c18947349b724ded25bb5f5639ec2"
+    },
+    {
+      "id": "drumire",
+      "name": "Drumire",
+      "spritePath": "/game/25600878/monster/drumire.png",
+      "hash64": "003c3c7e7e7c0000",
+      "averageRgb": [
+        59,
+        48,
+        62
+      ],
+      "edgeDensity": 0.2896,
+      "sourceSha256": "a9a7f6200a1d47a1abbe3a5055c9659451783f873cc6e080ee0f47cefde7d6c3"
+    },
+    {
+      "id": "dryadell",
+      "name": "Dryadell",
+      "spritePath": "/game/25600878/monster/dryadell.png",
+      "hash64": "007e7e3c3c7e3800",
+      "averageRgb": [
+        51,
+        73,
+        41
+      ],
+      "edgeDensity": 0.3917,
+      "sourceSha256": "55d512e2759e1dbfca9c7c1714e1bbb792105c5923ac8bdd99ca3100826ba87d"
+    },
+    {
+      "id": "emberpaw",
+      "name": "Emberpaw",
+      "spritePath": "/game/25600878/monster/emberpaw.png",
+      "hash64": "183e7e7878300000",
+      "averageRgb": [
+        48,
+        32,
+        21
+      ],
+      "edgeDensity": 0.2479,
+      "sourceSha256": "bdb2b140373875b482a8a147ac51bcfe406132312e0ad364bc9ecb6bb3edd264"
+    },
+    {
+      "id": "flarilisk",
+      "name": "Flarilisk",
+      "spritePath": "/game/25600878/monster/flarilisk.png",
+      "hash64": "2c3e3e1e38180000",
+      "averageRgb": [
+        26,
+        32,
+        30
+      ],
+      "edgeDensity": 0.2812,
+      "sourceSha256": "ba578e36e58264b57ac76f0d9e9ca2a07d4c220c7310262bc6175a349c0a8e6a"
+    },
+    {
+      "id": "fumungus",
+      "name": "Fumungus",
+      "spritePath": "/game/25600878/monster/fumungus.png",
+      "hash64": "183c3c3c3c3c3c10",
+      "averageRgb": [
+        51,
+        42,
+        25
+      ],
+      "edgeDensity": 0.3167,
+      "sourceSha256": "7b7952fa83ec252e125d556151eb26a6b6d433af25aaa875d47d856394f59895"
+    },
+    {
+      "id": "gemwing",
+      "name": "Gemwing",
+      "spritePath": "/game/25600878/monster/gemwing.png",
+      "hash64": "00383c3e7e700000",
+      "averageRgb": [
+        44,
+        46,
+        37
+      ],
+      "edgeDensity": 0.2625,
+      "sourceSha256": "485af7315f0a8953926289cace351ba93ed0927719aa394f088d2cfc71d6f8ec"
+    },
+    {
+      "id": "ginsage",
+      "name": "Ginsage",
+      "spritePath": "/game/25600878/monster/ginsage.png",
+      "hash64": "3c3c381e7e3c1808",
+      "averageRgb": [
+        49,
+        51,
+        25
+      ],
+      "edgeDensity": 0.3375,
+      "sourceSha256": "57ec269ca1c1b4f869348159a537eeae52501aedfe0301c4c0313e79b573c5af"
+    },
+    {
+      "id": "mallogre",
+      "name": "Mallogre",
+      "spritePath": "/game/25600878/monster/mallogre.png",
+      "hash64": "3038383e1e1e0800",
+      "averageRgb": [
+        25,
+        27,
+        32
+      ],
+      "edgeDensity": 0.2375,
+      "sourceSha256": "bf834ffde860063b83b09697b81329691b6fb8e332894f05387a754d4b62a82c"
+    },
+    {
+      "id": "ninflora",
+      "name": "Ninflora",
+      "spritePath": "/game/25600878/monster/ninflora.png",
+      "hash64": "0838383c3c383000",
+      "averageRgb": [
+        25,
+        33,
+        22
+      ],
+      "edgeDensity": 0.2542,
+      "sourceSha256": "690c66d261be0c57b228c1ba218dbd7ee129ebac170c7b9ea2a20b4a28a3c912"
+    },
+    {
+      "id": "oniclaw",
+      "name": "Oniclaw",
+      "spritePath": "/game/25600878/monster/oniclaw.png",
+      "hash64": "003c7e7c3c3c3c00",
+      "averageRgb": [
+        79,
+        51,
+        29
+      ],
+      "edgeDensity": 0.3646,
+      "sourceSha256": "1c5dee5623181af1c3de8ee5d4be7c096fa2cfd04ceebca6aa6ed34830b5ecb1"
+    },
+    {
+      "id": "opalion",
+      "name": "Opalion",
+      "spritePath": "/game/25600878/monster/opalion.png",
+      "hash64": "303c7e7a78300000",
+      "averageRgb": [
+        48,
+        54,
+        63
+      ],
+      "edgeDensity": 0.3187,
+      "sourceSha256": "282ef5237045da687306310d4fd6c27710ffac4cd189e98054325391c0e11278"
+    },
+    {
+      "id": "orcana",
+      "name": "Orcana",
+      "spritePath": "/game/25600878/monster/orcana.png",
+      "hash64": "207c7c38161e0600",
+      "averageRgb": [
+        19,
+        28,
+        34
+      ],
+      "edgeDensity": 0.2687,
+      "sourceSha256": "b7adc76217ff71a763de53fa699b70b21d61bf50a21db4a0a48b44cc2e085dd5"
+    },
+    {
+      "id": "prismagon",
+      "name": "Prismagon",
+      "spritePath": "/game/25600878/monster/prismagon.png",
+      "hash64": "0c1e7b7e3c1c0c00",
+      "averageRgb": [
+        54,
+        42,
+        34
+      ],
+      "edgeDensity": 0.3958,
+      "sourceSha256": "4be1933d45dcdd80e65523c2cd9bb9a0ea73cb5d40794c8483ce1578cfc64680"
+    },
+    {
+      "id": "pylong",
+      "name": "Pylong",
+      "spritePath": "/game/25600878/monster/pylong.png",
+      "hash64": "003e3e3c30307030",
+      "averageRgb": [
+        36,
+        32,
+        19
+      ],
+      "edgeDensity": 0.2792,
+      "sourceSha256": "06a24917c94f499abdaf733015be36369e6c15ceb94ee44047f1a2d9a989e7b2"
+    },
+    {
+      "id": "reapra",
+      "name": "Reapra",
+      "spritePath": "/game/25600878/monster/reapra.png",
+      "hash64": "3838387c76762e08",
+      "averageRgb": [
+        41,
+        36,
+        31
+      ],
+      "edgeDensity": 0.3312,
+      "sourceSha256": "f32ef593c4a4a42ccb6dfd41cea012bef29cf80a09008f166e9cb733c60e2433"
+    },
+    {
+      "id": "shelldra",
+      "name": "Shelldra",
+      "spritePath": "/game/25600878/monster/shelldra.png",
+      "hash64": "361e3efc3e300000",
+      "averageRgb": [
+        28,
+        39,
+        34
+      ],
+      "edgeDensity": 0.3,
+      "sourceSha256": "0d77b15eb191932d19bd0fd3e555063dbc9a6389e7523157ace72447964ca377"
+    },
+    {
+      "id": "shrinell",
+      "name": "Shrinell",
+      "spritePath": "/game/25600878/monster/shrinell.png",
+      "hash64": "207e7c3c3c7e7e00",
+      "averageRgb": [
+        49,
+        61,
+        71
+      ],
+      "edgeDensity": 0.4979,
+      "sourceSha256": "8f5e3300d089a1ad06c367882d3876621804b4d38bff4daaa085d64383d6dfb1"
+    },
+    {
+      "id": "sirenade",
+      "name": "Sirenade",
+      "spritePath": "/game/25600878/monster/sirenade.png",
+      "hash64": "183e3e7c3c3c1000",
+      "averageRgb": [
+        26,
+        45,
+        47
+      ],
+      "edgeDensity": 0.3708,
+      "sourceSha256": "992929a6e8f96a2aa0677b7720724886939333c282648b5363845c6a329ccec1"
+    },
+    {
+      "id": "snapscald",
+      "name": "Snapscald",
+      "spritePath": "/game/25600878/monster/snapscald.png",
+      "hash64": "04061e3f7f780000",
+      "averageRgb": [
+        38,
+        26,
+        18
+      ],
+      "edgeDensity": 0.2479,
+      "sourceSha256": "7e9992fe17f3e1f0504dcac84fc6bd1e71165aa0ea001099fb3cb6b1f4c04012"
+    },
+    {
+      "id": "tengusto",
+      "name": "Tengusto",
+      "spritePath": "/game/25600878/monster/tengusto.png",
+      "hash64": "0008383a7e7e3e18",
+      "averageRgb": [
+        57,
+        44,
+        43
+      ],
+      "edgeDensity": 0.3625,
+      "sourceSha256": "63d9a83de675d1c88d16074fd27479bbb2aacb5b049c298ec37f0a04a70f2449"
+    },
+    {
+      "id": "wishwash",
+      "name": "Wishwash",
+      "spritePath": "/game/25600878/monster/wishwash.png",
+      "hash64": "10183c3c3c1c0000",
+      "averageRgb": [
+        27,
+        30,
+        32
+      ],
+      "edgeDensity": 0.2292,
+      "sourceSha256": "8e950111120351be5b143759aee8b52d3101cb814e657a80767631cdbffe8937"
+    },
+    {
+      "id": "zephyrex",
+      "name": "Zephyrex",
+      "spritePath": "/game/25600878/monster/zephyrex.png",
+      "hash64": "003c387c7cfe0e00",
+      "averageRgb": [
+        81,
+        55,
+        34
+      ],
+      "edgeDensity": 0.4375,
+      "sourceSha256": "df5cf9bf95e25a6c67cdcfa25cf73f5e2a1b43728b04dd7708275712197dfeea"
+    },
+    {
+      "id": "blixie",
+      "name": "Blixie",
+      "spritePath": "/game/25600878/monster/blixie.png",
+      "hash64": "70787c7e7e300000",
+      "averageRgb": [
+        64,
+        40,
+        19
+      ],
+      "edgeDensity": 0.3187,
+      "sourceSha256": "a75034ef52746bdf11cfbd3a35d9e34ed017541a366a22d24d05694d1aed7254"
+    },
+    {
+      "id": "cairnage",
+      "name": "Cairnage",
+      "spritePath": "/game/25600878/monster/cairnage.png",
+      "hash64": "2c7e7e3e3c1c1800",
+      "averageRgb": [
+        52,
+        52,
+        56
+      ],
+      "edgeDensity": 0.3542,
+      "sourceSha256": "283af70a64d3eb1598e06384716e82f2ae46a97f20c78f0688f286f2c8959cd0"
+    },
+    {
+      "id": "cobrex",
+      "name": "Cobrex",
+      "spritePath": "/game/25600878/monster/cobrex.png",
+      "hash64": "1c3c70183c3c3c18",
+      "averageRgb": [
+        34,
+        31,
+        30
+      ],
+      "edgeDensity": 0.2854,
+      "sourceSha256": "ff22da1fb4f1f04e3ca6f56c9e9fff6eb24ec2a819e5c375b92229751265aa23"
+    },
+    {
+      "id": "dragonarch",
+      "name": "Draconarch",
+      "spritePath": "/game/25600878/monster/dragonarch.png",
+      "hash64": "183c78787e3e3000",
+      "averageRgb": [
+        60,
+        61,
+        68
+      ],
+      "edgeDensity": 0.4229,
+      "sourceSha256": "aaeff163bc4bf84344969a285767a2fa48e53d34babeb2a36c6595080c367519"
+    },
+    {
+      "id": "fernfowl",
+      "name": "Fernfowl",
+      "spritePath": "/game/25600878/monster/fernfowl.png",
+      "hash64": "101c3e3e30303000",
+      "averageRgb": [
+        28,
+        25,
+        16
+      ],
+      "edgeDensity": 0.2229,
+      "sourceSha256": "0c65f59418d2ed304bdc47f8a1d69fbf44289c0bd08661980d4a2975e36d9aab"
+    },
+    {
+      "id": "gachapod",
+      "name": "Gachapod",
+      "spritePath": "/game/25600878/monster/gachapod.png",
+      "hash64": "147c7e7e3e1c0000",
+      "averageRgb": [
+        55,
+        44,
+        53
+      ],
+      "edgeDensity": 0.3354,
+      "sourceSha256": "d029760faee7921a9cfef546b6ad09e4a62d148d79da791c470aa5b6531a7836"
+    },
+    {
+      "id": "gaiadrasil",
+      "name": "Gaiadrasil",
+      "spritePath": "/game/25600878/monster/gaiadrasil.png",
+      "hash64": "10181a7e3c3c3c00",
+      "averageRgb": [
+        55,
+        53,
+        24
+      ],
+      "edgeDensity": 0.3917,
+      "sourceSha256": "a99d38fd675d8588b92eb767f7a70eb78fdcad035ed54b6f1245d760f2bd25bd"
+    },
+    {
+      "id": "galvanine",
+      "name": "Galvanine",
+      "spritePath": "/game/25600878/monster/galvanine.png",
+      "hash64": "005a3c7e7e7e7600",
+      "averageRgb": [
+        60,
+        61,
+        58
+      ],
+      "edgeDensity": 0.4417,
+      "sourceSha256": "bafc0a2ad4630e2ddb252dfa731529b7a1a7bb8ea7cd0617ea893e09277ce0ac"
+    },
+    {
+      "id": "geminiss",
+      "name": "Geminiss",
+      "spritePath": "/game/25600878/monster/geminiss.png",
+      "hash64": "000c7c3c3e7e6000",
+      "averageRgb": [
+        23,
+        38,
+        56
+      ],
+      "edgeDensity": 0.2958,
+      "sourceSha256": "6b6cbdf71e6278461b2d3ca8c94534401aa7c78c79c34836272846a59ca6fd9c"
+    },
+    {
+      "id": "miasmaw",
+      "name": "Miasmaw",
+      "spritePath": "/game/25600878/monster/miasmaw.png",
+      "hash64": "003c7c3c3c382c00",
+      "averageRgb": [
+        48,
+        48,
+        41
+      ],
+      "edgeDensity": 0.3292,
+      "sourceSha256": "9db3c8afa7f4758a02312b0c1cc8b9bde091951cd218da1370e931758b3e8f4b"
+    },
+    {
+      "id": "onsetra",
+      "name": "Onsetra",
+      "spritePath": "/game/25600878/monster/onsetra.png",
+      "hash64": "187c66e7fce0e000",
+      "averageRgb": [
+        62,
+        43,
+        39
+      ],
+      "edgeDensity": 0.35,
+      "sourceSha256": "b59422dd1512df494b3915d31ddd2b2cbc640ec0403e3059d2a41170d313fd9f"
+    },
+    {
+      "id": "ouroblaze",
+      "name": "Ouroblaze",
+      "spritePath": "/game/25600878/monster/ouroblaze.png",
+      "hash64": "103c7e36263e3c00",
+      "averageRgb": [
+        71,
+        40,
+        20
+      ],
+      "edgeDensity": 0.425,
+      "sourceSha256": "0c1062b3c67435835b8501c37cb542101142f79fe697b5387f03c6123dd31bd2"
+    },
+    {
+      "id": "pompummel",
+      "name": "Pompummel",
+      "spritePath": "/game/25600878/monster/pompummel.png",
+      "hash64": "001e1e1f1b7ef800",
+      "averageRgb": [
+        33,
+        31,
+        38
+      ],
+      "edgeDensity": 0.3479,
+      "sourceSha256": "5354fa2bd61c39f8e8ee6bd8aa8c9ac85b3ca420d7238d8e250114b7222f3dc5"
+    },
+    {
+      "id": "quillustrous",
+      "name": "Quillustrous",
+      "spritePath": "/game/25600878/monster/quillustrous.png",
+      "hash64": "101c0c1c3e7e5a00",
+      "averageRgb": [
+        54,
+        38,
+        26
+      ],
+      "edgeDensity": 0.3521,
+      "sourceSha256": "a92132416e4b4476f37c5af60acbf82a7f2236d1a81a8b959bb739834fd32930"
+    },
+    {
+      "id": "saberhorn",
+      "name": "Saberhorn",
+      "spritePath": "/game/25600878/monster/saberhorn.png",
+      "hash64": "0c3e3c3e3e6e0000",
+      "averageRgb": [
+        51,
+        54,
+        50
+      ],
+      "edgeDensity": 0.4062,
+      "sourceSha256": "eb31c7ea33a0735d0bc7bdd7a515a642e7e16f61e59bcfd7fe98988a1433275a"
+    },
+    {
+      "id": "sproutquill",
+      "name": "Sproutquill",
+      "spritePath": "/game/25600878/monster/sproutquill.png",
+      "hash64": "103c3c3c3c180000",
+      "averageRgb": [
+        31,
+        27,
+        15
+      ],
+      "edgeDensity": 0.2104,
+      "sourceSha256": "eb5efed3d5dfb82b5abc4cbadfea8c2f5202d5c9addb55a948e499ae36687d15"
+    },
+    {
+      "id": "stellagon",
+      "name": "Stellagon",
+      "spritePath": "/game/25600878/monster/stellagon.png",
+      "hash64": "183e1e1c7c7e7a00",
+      "averageRgb": [
+        63,
+        38,
+        30
+      ],
+      "edgeDensity": 0.3896,
+      "sourceSha256": "322e7e6a18cd531ecb8aef02da96dfe660f9811327d10dde8ded55c795f32439"
+    },
+    {
+      "id": "torrantler",
+      "name": "Torrantler",
+      "spritePath": "/game/25600878/monster/torrantler.png",
+      "hash64": "0002367c7e763604",
+      "averageRgb": [
+        48,
+        54,
+        62
+      ],
+      "edgeDensity": 0.4313,
+      "sourceSha256": "ac3441f9ebf6d8be1e229de188b51643a1284a6709f506127b4625a4af78cffb"
+    },
+    {
+      "id": "tsunamere",
+      "name": "Tsunamere",
+      "spritePath": "/game/25600878/monster/tsunamere.png",
+      "hash64": "1c3e7e1858181818",
+      "averageRgb": [
+        46,
+        65,
+        64
+      ],
+      "edgeDensity": 0.4021,
+      "sourceSha256": "5222f425bb82773e3197a14f5e075f89c7cb2036a3fb50018da3220b600ccfdd"
+    },
+    {
+      "id": "vengrieve",
+      "name": "Vengrieve",
+      "spritePath": "/game/25600878/monster/vengrieve.png",
+      "hash64": "183c3c7e3c383810",
+      "averageRgb": [
+        44,
+        48,
+        62
+      ],
+      "edgeDensity": 0.3104,
+      "sourceSha256": "6a7efa8fdc4017f9f0818376b8b5a3c076349ca7de4051851451a413cbeed3f6"
+    },
+    {
+      "id": "aerophim",
+      "name": "Aerophim",
+      "spritePath": "/game/25600878/monster/aerophim.png",
+      "hash64": "0018383c7e4e0400",
+      "averageRgb": [
+        43,
+        46,
+        50
+      ],
+      "edgeDensity": 0.3021,
+      "sourceSha256": "faab832fe7fc847040ac31eedf2840a3964b3e9add16d840f59e1f22fdf5cd4f"
+    },
+    {
+      "id": "cosmivore",
+      "name": "Cosmivore",
+      "spritePath": "/game/25600878/monster/cosmivore.png",
+      "hash64": "107c7e7e7e180800",
+      "averageRgb": [
+        61,
+        54,
+        46
+      ],
+      "edgeDensity": 0.3083,
+      "sourceSha256": "d53e6bde0639fcf6f1c4ed1fbf6aa95d9abe90f54bba09dbee6ddab96692277a"
+    },
+    {
+      "id": "faebloom",
+      "name": "Faebloom",
+      "spritePath": "/game/25600878/monster/faebloom.png",
+      "hash64": "003c3c3c3c3e1800",
+      "averageRgb": [
+        41,
+        28,
+        30
+      ],
+      "edgeDensity": 0.2271,
+      "sourceSha256": "5b5c11f71720d37f8fa744aa388c54afffb133e735bd7e1f35d589cd15a2e098"
+    },
+    {
+      "id": "goldora",
+      "name": "Goldora",
+      "spritePath": "/game/25600878/monster/goldora.png",
+      "hash64": "087c7c7e7e1e3c20",
+      "averageRgb": [
+        84,
+        63,
+        36
+      ],
+      "edgeDensity": 0.3479,
+      "sourceSha256": "eefb8c9f2e02998d25506d9c85ac4226488f46cf33ead58097046560b6e76d31"
+    },
+    {
+      "id": "missing_no",
+      "name": "MissingN.",
+      "spritePath": "/game/25600878/monster/missing_no.png",
+      "hash64": "007c7c7c7e7e3200",
+      "averageRgb": [
+        27,
+        34,
+        46
+      ],
+      "edgeDensity": 0.3167,
+      "sourceSha256": "b3fac23a5176be6fa171a0ebde06ad9386347a3a999ad40f32005fe3ed4650b2"
+    },
+    {
+      "id": "null_00",
+      "name": "NULL-00",
+      "spritePath": "/game/25600878/monster/null_00.png",
+      "hash64": "183c7c3e1e0e0000",
+      "averageRgb": [
+        28,
+        35,
+        43
+      ],
+      "edgeDensity": 0.2167,
+      "sourceSha256": "1f36fec10719be4c113e9fdd24836cd2f7819d04dbf28faa5ac2cb686b69ed22"
+    },
+    {
+      "id": "null_7f",
+      "name": "NULL-7F",
+      "spritePath": "/game/25600878/monster/null_7f.png",
+      "hash64": "00183c38383c3800",
+      "averageRgb": [
+        14,
+        17,
+        22
+      ],
+      "edgeDensity": 0.1875,
+      "sourceSha256": "ba205f3a98dfe1ad572c2512b86b1d3cce69cb0e9917ccdf46a5a65f55a99aee"
+    },
+    {
+      "id": "null_ff",
+      "name": "NULL-FF",
+      "spritePath": "/game/25600878/monster/null_ff.png",
+      "hash64": "00787c7e7e7e3200",
+      "averageRgb": [
+        29,
+        35,
+        48
+      ],
+      "edgeDensity": 0.3417,
+      "sourceSha256": "b51639443aee25f89a816e88ecaa0eb32463ab1d1d1b699e06733974e6bb1dbf"
+    },
+    {
+      "id": "omnichrome",
+      "name": "Omnichrome",
+      "spritePath": "/game/25600878/monster/omnichrome.png",
+      "hash64": "087e7e7e3e0e0c00",
+      "averageRgb": [
+        53,
+        44,
+        43
+      ],
+      "edgeDensity": 0.3208,
+      "sourceSha256": "708938420aa8717f0753b95b5f9bf02cdb2f30b060ae505ee5bd9ea4c9f62839"
+    },
+    {
+      "id": "rigalord",
+      "name": "Rigalord",
+      "spritePath": "/game/25600878/monster/rigalord.png",
+      "hash64": "0008081e3e3c1c18",
+      "averageRgb": [
+        20,
+        19,
+        17
+      ],
+      "edgeDensity": 0.2167,
+      "sourceSha256": "3b991a6060fdf0d8ef17f3f6d8e4bdf7d7cca30c8dd5d88779b79f99ad685179"
+    },
+    {
+      "id": "riglet",
+      "name": "Riglet",
+      "spritePath": "/game/25600878/monster/riglet.png",
+      "hash64": "10383e7e1c1c0000",
+      "averageRgb": [
+        26,
+        24,
+        25
+      ],
+      "edgeDensity": 0.2125,
+      "sourceSha256": "732ea3c95df1da2813421b584cfc4b0ec0b20ea31b6f46d8e13d934bf2a06690"
+    }
+  ]
+}

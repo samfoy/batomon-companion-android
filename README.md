@@ -2,12 +2,12 @@
 
 An experimental, GPLv3 Android companion for AYN Thor and Android handhelds. It is designed for a split-display setup: Batomon stays on the upper/default display while Companion uses the Thor lower touchscreen (1240×1080). The app currently ships a diagnostic capture pipeline and an honest, fixture-driven recognition shell; it does not claim to recognize live Batomon state until real Thor fixtures have been collected and calibrated.
 
-## Status: 0.3.0 diagnostic/manual MVP
+## Status: 0.4.0 experimental recognition
 
 - Launches the activity on the smallest non-default display when Android exposes one; falls back to the current display.
 - Requests Android MediaProjection permission and captures the default display with an RGBA `ImageReader` in a foreground service.
 - Throttles samples, uses `acquireLatestImage()`, and closes all images/surfaces/threads on stop.
-- Keeps raw frames ephemeral. The current recognizer returns `UNKNOWN` until fixture-backed recognizers are added.
+- Keeps raw frames ephemeral. v0.4 now exercises the complete experimental observation path: ImageReader frame → row-stride-safe bitmap conversion → rotation/letterbox normalization → bounded downsample → scene and board recognizers → confidence/debounce → lower-screen diagnostics. It is deliberately conservative and does not claim live-game accuracy.
 - Includes Room models for local runs and observations plus Live/Runs/Comps/Dex/Settings lower-screen skeletons.
 - Adds functional manual run entry: editable mode/opening board, round wins/losses, lives, finish result, persisted history, and recaps.
 - Adds a searchable text-only Balance 24 item reference catalog; artwork is not redistributed while licensing is pending. See [REFERENCE.md](REFERENCE.md).
@@ -15,7 +15,8 @@ An experimental, GPLv3 Android companion for AYN Thor and Android handhelds. It 
 - Replaces free-text opening-board entry with six structured Batomon selectors.
 - Adds history filtering, opening-board grouping, round win-rate summary, safe delete confirmation, and JSON export.
 - Adds an explicit SAF export for one redacted diagnostic frame; nothing is saved unless the user chooses a destination.
-- Adds resolution-normalized ROIs, perceptual hashes, template matching, confidence thresholds, and golden tests. No live-game accuracy is claimed.
+- Adds resolution-normalized ROIs, perceptual hashes, derived sprite signatures, template matching, confidence thresholds, and golden tests. Automatic state commits require repeated high-confidence observations; the current heuristic scene scores are below that threshold, so `UNKNOWN` is expected until Thor fixtures calibrate the pipeline.
+- Adds an opt-in local calibration profile for the board ROI. Users can adjust normalized bounds in Settings after saving an explicitly exported diagnostic frame; raw frames are never uploaded or silently retained.
 
 ## Build
 
@@ -40,7 +41,7 @@ MediaProjection captures the default display on the Android configurations this 
 
 The testable boundary is `FrameRecognizer`. Add redacted, redistributable frame fixtures only when you have permission to share them, then implement recognizers under `recognition/` and add golden tests. The diagnostic MVP deliberately avoids synthetic accuracy claims. A future diagnostics screen will export selected crops for private calibration; raw captures are not uploaded.
 
-Local emulator evidence is recorded in [EMULATOR.md](EMULATOR.md). The host lacks KVM; bounded software-acceleration attempts reached guest display initialization but did not complete boot, so no emulator split-display result is claimed.
+Local emulator evidence is recorded in [EMULATOR.md](EMULATOR.md). The host lacks KVM; bounded software-acceleration attempts reached guest display initialization but did not complete boot, so no emulator split-display or capture result is claimed.
 
 ## Design notes
 
@@ -52,4 +53,4 @@ GPLv3. See [LICENSE](LICENSE). Batomon and AYN are trademarks of their respectiv
 
 ## Updating from v0.2.0
 
-v0.2.0 was debug-signed. v0.3.0 is the first durable release signed with the retained project keystore, so Android cannot update a v0.2.0 debug installation in place; uninstall v0.2.0 first (local v0.2 data will be removed) or use a separate package install path.
+v0.2.0 was debug-signed. v0.3.0 and later releases use the same durable project signing identity, so they update in place. Android cannot update a v0.2.0 debug installation in place; uninstall v0.2.0 first (local v0.2 data will be removed) or use a separate package install path.

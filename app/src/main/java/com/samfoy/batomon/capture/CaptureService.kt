@@ -15,10 +15,13 @@ import android.media.projection.MediaProjectionManager
 import android.os.*
 import android.util.Log
 import android.net.Uri
+import android.view.Surface
+import android.view.Display
 import androidx.core.app.NotificationCompat
 import androidx.lifecycle.LifecycleService
 import com.samfoy.batomon.R
-import com.samfoy.batomon.recognition.SceneRecognizer
+import com.samfoy.batomon.recognition.*
+import org.json.JSONObject
 import java.util.concurrent.atomic.AtomicBoolean
 
 class CaptureService : LifecycleService() {
@@ -31,7 +34,9 @@ class CaptureService : LifecycleService() {
     @Volatile private var pendingExportUri: Uri? = null
     private val running = AtomicBoolean(false)
     private var lastFrameAt = 0L
-    private val recognizer = SceneRecognizer()
+    private var recognizer: FrameRecognizer = SceneRecognizer()
+    private var observationGate = ObservationGate()
+    private var sampleCount = 0
 
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
         super.onStartCommand(intent, flags, startId)
@@ -69,6 +74,9 @@ class CaptureService : LifecycleService() {
             val height = metrics.heightPixels.coerceAtLeast(240)
             reader = ImageReader.newInstance(width, height, PixelFormat.RGBA_8888, 2)
             thread = HandlerThread("batomon-capture").also { it.start(); handler = Handler(it.looper) }
+            recognizer = ExperimentalSceneRecognizer(SpriteBoardMatcher(loadSpriteTemplates(), CalibrationProfile.load(this).board))
+            observationGate = ObservationGate()
+            sampleCount = 0
             reader?.setOnImageAvailableListener({ source ->
                 val now = SystemClock.elapsedRealtime()
                 if (now - lastFrameAt < FRAME_INTERVAL_MS) return@setOnImageAvailableListener
@@ -79,8 +87,13 @@ class CaptureService : LifecycleService() {
                         pendingExportUri = null
                         exportRedactedFrame(image, uri)
                     }
-                    // Keep frames ephemeral. Recognition implementations may copy only the needed crop.
-                    // The MVP intentionally returns UNKNOWN until calibrated Thor fixtures are supplied.
+                    val processed = FrameBitmapConverter.fromImage(image, displayRotation(), MAX_RECOGNITION_DIMENSION)
+                    try {
+                        sampleCount++
+                        val candidate = recognizer.recognize(processed.bitmap) ?: Recognition(Scene.UNKNOWN, 0f, "recognizer returned no candidate")
+                        val decision = observationGate.accept(candidate)
+                        sendState(STATE_FRAME, candidate.details, candidate.scene.name, candidate.confidence, processed.bitmap.width, processed.bitmap.height, sampleCount, decision.committed)
+                    } finally { processed.bitmap.recycle() }
                 } finally { image.close() }
             }, handler)
 
@@ -102,6 +115,15 @@ class CaptureService : LifecycleService() {
             stopSelf()
         }
     }
+
+    private fun displayRotation(): Int = when (getSystemService(DisplayManager::class.java).getDisplay(Display.DEFAULT_DISPLAY)?.rotation) {
+        Surface.ROTATION_90 -> 90; Surface.ROTATION_180 -> 180; Surface.ROTATION_270 -> 270; else -> 0
+    }
+
+    private fun loadSpriteTemplates(): List<SpriteTemplate> = runCatching {
+        val root = JSONObject(assets.open("reference/batomon_sprite_signatures_balance24.json").bufferedReader().use { it.readText() }); val entries = root.getJSONArray("entries")
+        (0 until entries.length()).map { index -> val item = entries.getJSONObject(index); val rgb = item.getJSONArray("averageRgb"); SpriteTemplate(item.getString("id"), item.getString("name"), SpriteSignature(java.lang.Long.parseUnsignedLong(item.getString("hash64"), 16), rgb.getInt(0), rgb.getInt(1), rgb.getInt(2), item.getDouble("edgeDensity").toFloat())) }
+    }.getOrElse { error -> Log.w(TAG, "Sprite signature catalog unavailable", error); emptyList() }
 
     private fun stopCapture(projectionAlreadyStopped: Boolean = false, emitState: Boolean = true) {
         // Do not gate cleanup on `running`: startup can fail after allocating any one of these.
@@ -126,7 +148,9 @@ class CaptureService : LifecycleService() {
         val rowStride = plane.rowStride
         val rowPadding = rowStride - pixelStride * image.width
         val padded = Bitmap.createBitmap(image.width + rowPadding / pixelStride, image.height, Bitmap.Config.ARGB_8888)
-        padded.copyPixelsFromBuffer(plane.buffer)
+        // Use a duplicate so the recognition conversion can still consume the
+        // original Image plane after an explicitly armed export.
+        padded.copyPixelsFromBuffer(plane.buffer.duplicate())
         val bitmap = Bitmap.createBitmap(padded, 0, 0, image.width, image.height)
         padded.recycle()
         // Explicit diagnostic exports redact the common top/bottom system strips and carry a visible marker.
@@ -142,9 +166,9 @@ class CaptureService : LifecycleService() {
         sendState(STATE_EXPORT_SAVED)
     }
 
-    private fun sendState(state: String, error: String? = null) {
+    private fun sendState(state: String, error: String? = null, scene: String? = null, confidence: Float? = null, width: Int? = null, height: Int? = null, samples: Int? = null, committed: Boolean? = null) {
         sendBroadcast(Intent(ACTION_CAPTURE_STATE).setPackage(packageName).apply {
-            putExtra(EXTRA_STATE, state); if (error != null) putExtra(EXTRA_ERROR, error)
+            putExtra(EXTRA_STATE, state); if (error != null) putExtra(EXTRA_ERROR, error); if (scene != null) putExtra(EXTRA_SCENE, scene); if (confidence != null) putExtra(EXTRA_CONFIDENCE, confidence); if (width != null) putExtra(EXTRA_WIDTH, width); if (height != null) putExtra(EXTRA_HEIGHT, height); if (samples != null) putExtra(EXTRA_SAMPLES, samples); if (committed != null) putExtra(EXTRA_COMMITTED, committed)
         })
     }
 
@@ -153,8 +177,8 @@ class CaptureService : LifecycleService() {
     companion object {
         const val EXTRA_RESULT_CODE = "resultCode"; const val EXTRA_RESULT_DATA = "resultData"; const val EXTRA_EXPORT_URI = "exportUri"
         const val ACTION_SAVE_FRAME = "com.samfoy.batomon.SAVE_FRAME"; const val ACTION_STOP = "com.samfoy.batomon.STOP"; const val ACTION_CAPTURE_STATE = "com.samfoy.batomon.CAPTURE_STATE"
-        const val EXTRA_STATE = "state"; const val EXTRA_ERROR = "error"
-        const val STATE_CAPTURING = "capturing"; const val STATE_IDLE = "idle"; const val STATE_ERROR = "error"; const val STATE_EXPORT_ARMED = "export_armed"; const val STATE_EXPORT_SAVED = "export_saved"
-        private const val CHANNEL = "capture"; private const val NOTIFICATION_ID = 41; private const val FRAME_INTERVAL_MS = 700L; private const val TAG = "CaptureService"
+        const val EXTRA_STATE = "state"; const val EXTRA_ERROR = "error"; const val EXTRA_SCENE = "scene"; const val EXTRA_CONFIDENCE = "confidence"; const val EXTRA_WIDTH = "width"; const val EXTRA_HEIGHT = "height"; const val EXTRA_SAMPLES = "samples"; const val EXTRA_COMMITTED = "committed"
+        const val STATE_CAPTURING = "capturing"; const val STATE_FRAME = "frame"; const val STATE_IDLE = "idle"; const val STATE_ERROR = "error"; const val STATE_EXPORT_ARMED = "export_armed"; const val STATE_EXPORT_SAVED = "export_saved"
+        private const val CHANNEL = "capture"; private const val NOTIFICATION_ID = 41; private const val FRAME_INTERVAL_MS = 700L; private const val MAX_RECOGNITION_DIMENSION = 640; private const val TAG = "CaptureService"
     }
 }

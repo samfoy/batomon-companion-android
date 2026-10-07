@@ -22,3 +22,13 @@ class TemporalDebouncer(private val requiredMatches: Int = 3) {
         return if (matches >= requiredMatches) next else null
     }
 }
+
+data class ObservationDecision(val candidate: Recognition, val committed: Boolean)
+
+class ObservationGate(private val requiredMatches: Int = 3, private val minimumConfidence: Float = .8f) {
+    private val debouncer = TemporalDebouncer(requiredMatches)
+    fun accept(candidate: Recognition): ObservationDecision {
+        val stable = debouncer.accept(candidate)
+        return ObservationDecision(candidate, stable != null && stable.scene != Scene.UNKNOWN && stable.confidence >= minimumConfidence)
+    }
+}
