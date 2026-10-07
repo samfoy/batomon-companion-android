@@ -52,11 +52,11 @@ jobs:
             ./gradlew :app:assembleDebug
             adb install -r app/build/outputs/apk/debug/app-debug.apk
             adb shell settings delete global overlay_display_devices || true
-            ./gradlew :app:connectedDebugAndroidTest -Pandroid.testInstrumentationRunnerArguments.class=com.samfoy.batomon.MainActivityPrimaryTest
+            ./gradlew :app:connectedDebugAndroidTest --info -Pandroid.testInstrumentationRunnerArguments.class=com.samfoy.batomon.MainActivityPrimaryTest
             adb shell settings put global overlay_display_devices '1240x1080/160'
             adb shell am force-stop com.samfoy.batomon
-            ./gradlew :app:connectedDebugAndroidTest -Pandroid.testInstrumentationRunnerArguments.class=com.samfoy.batomon.MainActivitySecondaryDisplayTest
-            ./gradlew :app:connectedDebugAndroidTest -Pandroid.testInstrumentationRunnerArguments.class=com.samfoy.batomon.data.RunPersistenceTest
+            ./gradlew :app:connectedDebugAndroidTest --info -Pandroid.testInstrumentationRunnerArguments.class=com.samfoy.batomon.MainActivitySecondaryDisplayTest
+            ./gradlew :app:connectedDebugAndroidTest --info -Pandroid.testInstrumentationRunnerArguments.class=com.samfoy.batomon.data.RunPersistenceTest
       - name: Collect emulator evidence
         if: always()
         run: |
@@ -80,5 +80,8 @@ jobs:
         if: always()
         with:
           name: batomon-emulator-evidence
-          path: artifacts/
+          path: |
+            artifacts/
+            app/build/reports/androidTests/connected/
+            app/build/outputs/androidTest-results/connected/
           if-no-files-found: warn
