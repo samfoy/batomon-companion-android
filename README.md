@@ -2,7 +2,7 @@
 
 An experimental, GPLv3 Android companion for AYN Thor and Android handhelds. It is designed for a split-display setup: Batomon stays on the upper/default display while Companion uses the Thor lower touchscreen (1240×1080). The app currently ships a diagnostic capture pipeline and an honest, fixture-driven recognition shell; it does not claim to recognize live Batomon state until real Thor fixtures have been collected and calibrated.
 
-## Status: 0.4.0 experimental recognition
+## Status: 0.4.1 experimental recognition
 
 - Launches the activity on the smallest non-default display when Android exposes one; falls back to the current display.
 - Requests Android MediaProjection permission and captures the default display with an RGBA `ImageReader` in a foreground service.
@@ -41,7 +41,7 @@ MediaProjection captures the default display on the Android configurations this 
 
 The testable boundary is `FrameRecognizer`. Add redacted, redistributable frame fixtures only when you have permission to share them, then implement recognizers under `recognition/` and add golden tests. The diagnostic MVP deliberately avoids synthetic accuracy claims. A future diagnostics screen will export selected crops for private calibration; raw captures are not uploaded.
 
-Local emulator evidence is recorded in [EMULATOR.md](EMULATOR.md). The host lacks KVM; bounded software-acceleration attempts reached guest display initialization but did not complete boot, so no local emulator split-display or capture result is claimed. GitHub Actions has a separate hosted API 35 x86_64 lane that runs the primary-display UI test, enables a 1240×1080 overlay display, checks the routed activity through `dumpsys activity`, and runs an in-memory Room persistence smoke test. Its logcat, display/activity dumps, device properties, and screenshot are uploaded as evidence, including on failure.
+Local emulator evidence is recorded in [EMULATOR.md](EMULATOR.md). The host lacks KVM; bounded software-acceleration attempts reached guest display initialization but did not complete boot, so no local emulator split-display or capture result is claimed. GitHub Actions has a separate KVM-enabled API 35 x86_64 lane that runs the primary-display launch test, enables a 1240×1080 overlay display, asserts the resumed activity's non-default display ID, and runs an in-memory Room persistence smoke test. Its test reports, logcat, display/activity dumps, device properties, and screenshot are uploaded as evidence, including on failure.
 
 ## Design notes
 

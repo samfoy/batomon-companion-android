@@ -5,7 +5,7 @@ plugins {
 }
 
 android { namespace = "com.samfoy.batomon"; compileSdk = 36
-    defaultConfig { applicationId = "com.samfoy.batomon"; minSdk = 26; targetSdk = 35; versionCode = 4; versionName = "0.4.0"; testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner" }
+    defaultConfig { applicationId = "com.samfoy.batomon"; minSdk = 26; targetSdk = 35; versionCode = 5; versionName = "0.4.1"; testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner" }
     signingConfigs {
         create("stableRelease") {
             val keystorePath = System.getenv("BATOMON_RELEASE_KEYSTORE")
