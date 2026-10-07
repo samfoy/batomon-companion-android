@@ -98,12 +98,12 @@ class CaptureService : LifecycleService() {
         } catch (failure: Throwable) {
             Log.e(TAG, "Capture startup failed", failure)
             sendState(STATE_ERROR, failure.message ?: "Capture startup failed")
-            stopCapture()
+            stopCapture(emitState = false)
             stopSelf()
         }
     }
 
-    private fun stopCapture(projectionAlreadyStopped: Boolean = false) {
+    private fun stopCapture(projectionAlreadyStopped: Boolean = false, emitState: Boolean = true) {
         // Do not gate cleanup on `running`: startup can fail after allocating any one of these.
         val resourcesAllocated = projection != null || reader != null || virtualDisplay != null || thread != null
         val hadResources = CaptureCleanupPolicy.needsCleanup(running.getAndSet(false), resourcesAllocated)
@@ -117,7 +117,7 @@ class CaptureService : LifecycleService() {
             if (!projectionAlreadyStopped) runCatching { currentProjection.stop() }
         }
         thread?.quitSafely(); thread = null; handler = null
-        sendState(STATE_IDLE)
+        if (emitState) sendState(STATE_IDLE)
     }
 
     private fun exportRedactedFrame(image: Image, uri: Uri) {
