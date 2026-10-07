@@ -20,3 +20,9 @@ For v0.3 I also ran the same AVD as a live headless session with software accele
 3. An in-memory Room insert/read of a manual run and observation.
 
 The job uploads `adb devices`, `getprop`, `dumpsys display`, `dumpsys activity activities`, logcat, and a screenshot as `batomon-emulator-evidence`, including when a test fails. The overlay display is an emulator mechanism, not proof of AYN firmware behavior. MediaProjection permission, default-display mirroring, rotation, and recognition accuracy still require physical Thor validation.
+
+### Hosted-run evidence (October 7, 2026)
+
+Run `37581141264` reached a responsive API 35 guest but the action reported that Linux hardware acceleration was unavailable; its software-accelerated guest never set `sys.boot_completed` during the bounded attempt. The uploaded evidence shows only the 1080×1920 default display and no app activity. The artifact is available from the [run artifacts](https://github.com/samfoy/batomon-companion-android/actions/runs/37581141264/artifacts/11464299514).
+
+Run `37582496441` used the current SDK-manager setup, passed the ordinary hosted build job, and retried the emulator with `disable-linux-hw-accel: false` and a 180-second boot bound. It still did not reach `sys.boot_completed` before cancellation/cleanup. Therefore there is no hosted ActivityOptions, overlay-display, Room instrumentation, or MediaProjection result to report yet. This is an environment limitation, not a passing emulator validation; the workflow remains ready to run on a runner with working KVM.

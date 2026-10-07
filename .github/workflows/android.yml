@@ -36,7 +36,7 @@ jobs:
           profile: pixel_2
           emulator-options: -no-window -gpu swiftshader_indirect -no-snapshot -noaudio -no-boot-anim
           disable-linux-hw-accel: false
-          emulator-boot-timeout: 300
+          emulator-boot-timeout: 180
           disable-animations: true
           script: |
             set -euo pipefail
