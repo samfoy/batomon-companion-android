@@ -52,12 +52,21 @@ jobs:
         if: always()
         run: |
           mkdir -p artifacts
-          adb devices -l > artifacts/adb-devices.txt || true
-          adb shell getprop > artifacts/getprop.txt || true
-          adb shell dumpsys display > artifacts/dumpsys-display.txt || true
-          adb shell dumpsys activity activities > artifacts/dumpsys-activity.txt || true
-          adb logcat -d -v threadtime > artifacts/logcat.txt || true
-          adb exec-out screencap -p > artifacts/screenshot.png || true
+          collect() {
+            name="$1"
+            shift
+            if timeout --foreground 20s "$@" > "artifacts/$name" 2>&1; then
+              :
+            else
+              echo "command timed out or failed: $*" >> "artifacts/$name"
+            fi
+          }
+          collect adb-devices.txt adb devices -l
+          collect getprop.txt adb shell getprop
+          collect dumpsys-display.txt adb shell dumpsys display
+          collect dumpsys-activity.txt adb shell dumpsys activity activities
+          collect logcat.txt adb logcat -d -v threadtime
+          collect screenshot.png adb exec-out screencap -p
       - uses: actions/upload-artifact@v4
         if: always()
         with:
